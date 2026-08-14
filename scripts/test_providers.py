@@ -22,11 +22,23 @@ import asyncio
 import inspect
 import json
 import os
+import sys
 import time
 import traceback
+import warnings
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from typing import Optional
+
+# Silence known-harmless noise from optional g4f extras before anything else loads:
+# - onnxruntime prints a device-discovery warning on virtualized CI hardware
+# - pydub warns if ffmpeg isn't on PATH (we still install ffmpeg in the workflow as the real fix)
+warnings.filterwarnings("ignore", message="Couldn't find ffmpeg or avconv")
+try:
+    import onnxruntime as _ort  # noqa: E402
+    _ort.set_default_logger_severity(3)  # 3 = only errors and above
+except Exception:
+    pass
 
 import g4f
 from g4f import Provider
@@ -37,6 +49,34 @@ MAX_CONCURRENCY = int(os.environ.get("G4F_TEST_CONCURRENCY", "8"))
 MAX_MODELS_PER_PROVIDER = int(os.environ.get("G4F_MAX_MODELS_PER_PROVIDER", "6"))
 OUTPUT_DIR = "results"
 RESULTS_JSON = os.path.join(OUTPUT_DIR, "results.json")
+
+
+def log(msg: str) -> None:
+    """Timestamped, immediately-flushed log line so GitHub Actions streams it live."""
+    ts = datetime.now().strftime("%H:%M:%S")
+    print(f"[{ts}] {msg}", flush=True)
+
+
+def group_start(title: str) -> None:
+    """Opens a collapsible section in the GitHub Actions log viewer."""
+    print(f"::group::{title}", flush=True)
+
+
+def group_end() -> None:
+    print("::endgroup::", flush=True)
+
+
+def quiet_exception_handler(loop, context):
+    """
+    Several g4f providers reuse an aiohttp ClientSession without ever closing
+    it, which makes asyncio print an "Unclosed client session" message when
+    the event loop shuts down. It's cosmetic and doesn't affect test results,
+    so we filter just that message out and let anything else through normally.
+    """
+    message = str(context.get("message", ""))
+    if "Unclosed client session" in message or "Unclosed connector" in message:
+        return
+    loop.default_exception_handler(context)
 
 # Heuristics used to flag providers that rely on a real browser session,
 # cookies, or a HAR file rather than working over a plain HTTP request.
@@ -128,10 +168,25 @@ def get_provider_models(cls):
     return out[:MAX_MODELS_PER_PROVIDER]
 
 
-async def test_one(name, cls, model, semaphore) -> ProviderModelResult:
+STATUS_ICON = {
+    "working": "\u2705",   # check
+    "error": "\u274c",     # x
+    "timeout": "\u23f1",   # stopwatch
+    "skipped": "\u23ed",   # skip
+}
+
+
+async def test_one(name, cls, model, semaphore, counters) -> ProviderModelResult:
     needs_auth = bool(getattr(cls, "needs_auth", False))
     browser_required = looks_browser_required(cls)
     working_flag = getattr(cls, "working", True)
+
+    tags = []
+    if needs_auth:
+        tags.append("needs auth")
+    if browser_required:
+        tags.append("needs browser/cookies")
+    tag_str = f" [{', '.join(tags)}]" if tags else ""
 
     result = ProviderModelResult(
         provider=name, model=model,
@@ -141,7 +196,18 @@ async def test_one(name, cls, model, semaphore) -> ProviderModelResult:
 
     if not working_flag:
         result.error = "marked not working by g4f"
+        counters["done"] += 1
+        log(
+            f"{STATUS_ICON['skipped']} SKIP  [{counters['done']}/{counters['total']}] "
+            f"{name} / {model}{tag_str} - g4f marks this provider as currently not working"
+        )
         return result
+
+    log(
+        f"\u23f3 START [{counters['started'] + 1}/{counters['total']}] "
+        f"Testing provider '{name}' with model '{model}'{tag_str} ..."
+    )
+    counters["started"] += 1
 
     async with semaphore:
         start = time.monotonic()
@@ -169,33 +235,87 @@ async def test_one(name, cls, model, semaphore) -> ProviderModelResult:
             result.status = "error"
             result.error = f"{type(exc).__name__}: {exc}"[:300]
             result.response_time_ms = round((time.monotonic() - start) * 1000, 1)
+
+    counters["done"] += 1
+    icon = STATUS_ICON.get(result.status, "?")
+    detail = f"{result.response_time_ms}ms" if result.response_time_ms is not None else ""
+    if result.status != "working" and result.error:
+        detail = f"{detail} - {result.error}" if detail else result.error
+    log(
+        f"{icon} DONE  [{counters['done']}/{counters['total']}] "
+        f"{name} / {model}: {result.status.upper()} ({detail})"
+    )
     return result
 
 
 async def main():
+    loop = asyncio.get_running_loop()
+    loop.set_exception_handler(quiet_exception_handler)
+
+    log("=== g4f Provider & Model Health Check starting ===")
+    log(
+        f"Config: timeout={PER_REQUEST_TIMEOUT}s, concurrency={MAX_CONCURRENCY}, "
+        f"max_models_per_provider={MAX_MODELS_PER_PROVIDER}"
+    )
+    log(f"g4f version detected: {getattr(g4f, '__version__', 'unknown')}")
+
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    group_start("Step 1/3: Discovering providers and models")
+    log("Getting ready: scanning g4f.Provider for usable provider classes...")
     providers = discover_providers()
-    semaphore = asyncio.Semaphore(MAX_CONCURRENCY)
+    log(f"Found {len(providers)} provider classes. Resolving their model lists...")
 
-    tasks = []
+    plan = []
     for name, cls in providers:
-        for model in get_provider_models(cls):
-            tasks.append(test_one(name, cls, model, semaphore))
+        models = get_provider_models(cls)
+        plan.append((name, cls, models))
+        log(f"  - {name}: {len(models)} model(s) queued -> {', '.join(models)}")
 
-    print(f"Testing {len(tasks)} provider/model pairs across {len(providers)} providers...")
+    total_pairs = sum(len(models) for _, _, models in plan)
+    log(f"Discovery complete: {total_pairs} provider/model pairs to test.")
+    group_end()
+
+    group_start(f"Step 2/3: Testing {total_pairs} provider/model pairs (concurrency={MAX_CONCURRENCY})")
+    semaphore = asyncio.Semaphore(MAX_CONCURRENCY)
+    counters = {"started": 0, "done": 0, "total": total_pairs}
+
+    tasks = [
+        test_one(name, cls, model, semaphore, counters)
+        for name, cls, models in plan
+        for model in models
+    ]
 
     results = []
-    for i, coro in enumerate(asyncio.as_completed(tasks), 1):
+    for coro in asyncio.as_completed(tasks):
         try:
             r = await coro
         except Exception as exc:  # noqa: BLE001
+            counters["done"] += 1
             r = ProviderModelResult(
                 provider="unknown", model="unknown", needs_auth=False,
                 browser_required=False, status="error",
                 error=f"harness error: {exc}",
             )
+            log(f"\u274c DONE  [{counters['done']}/{counters['total']}] harness error: {exc}")
         results.append(r)
-        print(f"[{i}/{len(tasks)}] {r.provider}/{r.model}: {r.status}")
+
+    log("All provider/model pairs finished.")
+    group_end()
+
+    group_start("Step 3/3: Writing results.json")
+    working = [r for r in results if r.status == "working"]
+    instant = [r for r in working if not r.needs_auth and not r.browser_required]
+    errored = [r for r in results if r.status in ("error", "timeout")]
+    skipped = [r for r in results if r.status == "skipped"]
+
+    log("Summary:")
+    log(f"  Total tested        : {len(results)}")
+    log(f"  Working             : {len(working)}")
+    log(f"  Working, no auth,")
+    log(f"  no browser (instant): {len(instant)}")
+    log(f"  Failed / timed out  : {len(errored)}")
+    log(f"  Skipped (not working per g4f): {len(skipped)}")
 
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -205,7 +325,15 @@ async def main():
     }
     with open(RESULTS_JSON, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
-    print(f"Wrote {RESULTS_JSON}")
+    log(f"Wrote {RESULTS_JSON}")
+    group_end()
+
+    # Give any lingering aiohttp sessions a moment to close cleanly before the
+    # event loop shuts down — reduces (but per the exception handler above,
+    # doesn't need to fully eliminate) "Unclosed client session" noise.
+    await asyncio.sleep(0.25)
+
+    log("=== Done ===")
 
 
 if __name__ == "__main__":
@@ -213,4 +341,4 @@ if __name__ == "__main__":
         asyncio.run(main())
     except Exception:
         traceback.print_exc()
-        raise
+        sys.exit(1)
