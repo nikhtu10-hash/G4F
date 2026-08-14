@@ -8,6 +8,15 @@ JSON_PATH = os.path.join(OUTPUT_DIR, "results.json")
 TXT_PATH = os.path.join(OUTPUT_DIR, "results.txt")
 HTML_PATH = os.path.join(OUTPUT_DIR, "index.html")
 
+KIND_ORDER = ["chat", "image", "audio", "video", "transcription"]
+KIND_LABEL = {
+    "chat": "CHAT",
+    "image": "IMAGE GENERATION",
+    "audio": "AUDIO / TEXT-TO-SPEECH",
+    "video": "VIDEO GENERATION",
+    "transcription": "TRANSCRIPTION (SPEECH-TO-TEXT)",
+}
+
 
 def load():
     with open(JSON_PATH, "r", encoding="utf-8") as f:
@@ -16,31 +25,46 @@ def load():
 
 def write_txt(data):
     results = data["results"]
-    instant = [
-        r for r in results
-        if r["status"] == "working" and not r["needs_auth"] and not r["browser_required"]
-    ]
+    partial = data.get("partial", False)
 
     lines = [
         "g4f Provider & Model Health Report",
         f"Generated: {data['generated_at']}",
         f"g4f version: {data['g4f_version']}",
-        f"Total provider/model pairs tested: {data['total_pairs']}",
-        "",
-        f"WORKING INSTANTLY, NO AUTH, NO BROWSER ({len(instant)}):",
-        "-" * 60,
+        f"Total provider/capability/model(/voice) combinations tested: {data['total_pairs']}",
     ]
-    for r in sorted(instant, key=lambda x: x["response_time_ms"] or 9e9):
-        lines.append(f"{r['provider']:<25} {r['model']:<25} {r['response_time_ms']}ms")
+    if partial:
+        lines.append("NOTE: this run did not finish - results below are partial.")
+    lines.append("")
 
-    lines += ["", "ALL RESULTS:", "-" * 60]
-    for r in results:
-        err = f" error={r['error']}" if r.get("error") else ""
-        lines.append(
-            f"{r['provider']:<25} {r['model']:<25} status={r['status']:<8} "
-            f"auth={str(r['needs_auth']):<5} browser={str(r['browser_required']):<5} "
-            f"time={r['response_time_ms']}ms{err}"
-        )
+    for kind in KIND_ORDER:
+        kind_results = [r for r in results if r["kind"] == kind]
+        if not kind_results:
+            continue
+
+        instant = [
+            r for r in kind_results
+            if r["status"] == "working" and not r["needs_auth"] and not r["needs_manual_session"]
+        ]
+        lines += [
+            f"{KIND_LABEL[kind]} - working, no auth, no login-session required ({len(instant)}):",
+            "-" * 70,
+        ]
+        for r in sorted(instant, key=lambda x: x["response_time_ms"] or 9e9):
+            voice_part = f" voice={r['voice']}" if r.get("voice") else ""
+            lines.append(f"{r['provider']:<25} {r['model']:<25}{voice_part} {r['response_time_ms']}ms")
+
+        lines += ["", f"{KIND_LABEL[kind]} - ALL RESULTS ({len(kind_results)}):", "-" * 70]
+        for r in kind_results:
+            err = f" error={r['error']}" if r.get("error") else ""
+            voice_part = f" voice={r['voice']:<12}" if r.get("voice") else ""
+            lines.append(
+                f"{r['provider']:<25} {r['model']:<25}{voice_part} status={r['status']:<8} "
+                f"auth={str(r['needs_auth']):<5} browser_automation={str(r['browser_automation']):<5} "
+                f"manual_session={str(r['needs_manual_session']):<5} "
+                f"time={r['response_time_ms']}ms{err}"
+            )
+        lines.append("")
 
     with open(TXT_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
@@ -78,6 +102,16 @@ HTML_TEMPLATE = r"""<!doctype html>
   }
   header h1 { margin: 0 0 4px; font-size: 22px; }
   header p { margin: 0; color: var(--text-dim); font-size: 13px; }
+  header .partial-banner {
+    margin-top: 10px;
+    display: inline-block;
+    background: rgba(210,153,34,.15);
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+  }
   .stats {
     display: flex; gap: 18px; margin-top: 14px; flex-wrap: wrap;
   }
@@ -147,6 +181,15 @@ HTML_TEMPLATE = r"""<!doctype html>
   .badge.timeout { background: rgba(210,153,34,.15); color: var(--yellow); }
   .badge.skipped { background: rgba(139,148,158,.15); color: var(--text-dim); }
 
+  .kindtag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    background: rgba(88,166,255,.12);
+    color: var(--accent);
+  }
+
   .yes { color: var(--yellow); }
   .no { color: var(--text-dim); }
   .snippet { color: var(--text-dim); font-size: 12px; max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -157,12 +200,21 @@ HTML_TEMPLATE = r"""<!doctype html>
 <body>
 <header>
   <h1>g4f Provider &amp; Model Health Report</h1>
-  <p>Generated __GENERATED_AT__ &middot; g4f version __G4F_VERSION__ &middot; __TOTAL__ provider/model pairs tested</p>
+  <p>Generated __GENERATED_AT__ &middot; g4f version __G4F_VERSION__ &middot; __TOTAL__ combinations tested</p>
+  __PARTIAL_BANNER__
   <div class="stats" id="stats"></div>
 </header>
 
 <div class="controls">
   <input type="text" id="search" placeholder="Search provider or model...">
+  <select id="kindFilter">
+    <option value="">All capabilities</option>
+    <option value="chat">Chat</option>
+    <option value="image">Image generation</option>
+    <option value="audio">Audio / TTS</option>
+    <option value="video">Video generation</option>
+    <option value="transcription">Transcription</option>
+  </select>
   <select id="statusFilter">
     <option value="">All statuses</option>
     <option value="working">Working</option>
@@ -171,18 +223,21 @@ HTML_TEMPLATE = r"""<!doctype html>
     <option value="skipped">Skipped</option>
   </select>
   <label><input type="checkbox" id="hideAuth"> Hide requires-auth</label>
-  <label><input type="checkbox" id="hideBrowser"> Hide requires-browser/cookies</label>
-  <label><input type="checkbox" id="instantOnly"> Instant-working only (no auth, no browser)</label>
+  <label><input type="checkbox" id="hideManualSession"> Hide requires-login-session</label>
+  <label><input type="checkbox" id="instantOnly"> Instant-working only (no auth, no login session)</label>
 </div>
 
 <table id="resultsTable">
   <thead>
     <tr>
       <th data-key="provider">Provider</th>
+      <th data-key="kind">Capability</th>
       <th data-key="model">Model</th>
+      <th data-key="voice">Voice</th>
       <th data-key="status">Status</th>
       <th data-key="needs_auth">Auth</th>
-      <th data-key="browser_required">Browser</th>
+      <th data-key="browser_automation">Browser Automation</th>
+      <th data-key="needs_manual_session">Needs Login Session</th>
       <th data-key="response_time_ms">Time (ms)</th>
       <th data-key="response_snippet">Response / Error</th>
     </tr>
@@ -201,17 +256,19 @@ let sortAsc = true;
 
 function render() {
   const q = document.getElementById('search').value.toLowerCase();
+  const kind = document.getElementById('kindFilter').value;
   const status = document.getElementById('statusFilter').value;
   const hideAuth = document.getElementById('hideAuth').checked;
-  const hideBrowser = document.getElementById('hideBrowser').checked;
+  const hideManualSession = document.getElementById('hideManualSession').checked;
   const instantOnly = document.getElementById('instantOnly').checked;
 
   let rows = DATA.filter(r => {
     if (q && !(r.provider.toLowerCase().includes(q) || r.model.toLowerCase().includes(q))) return false;
+    if (kind && r.kind !== kind) return false;
     if (status && r.status !== status) return false;
     if (hideAuth && r.needs_auth) return false;
-    if (hideBrowser && r.browser_required) return false;
-    if (instantOnly && (r.needs_auth || r.browser_required || r.status !== 'working')) return false;
+    if (hideManualSession && r.needs_manual_session) return false;
+    if (instantOnly && (r.needs_auth || r.needs_manual_session || r.status !== 'working')) return false;
     return true;
   });
 
@@ -230,10 +287,13 @@ function render() {
   tbody.innerHTML = rows.map(r => `
     <tr>
       <td>${escapeHtml(r.provider)}</td>
+      <td><span class="kindtag">${escapeHtml(r.kind)}</span></td>
       <td>${escapeHtml(r.model)}</td>
+      <td>${r.voice ? escapeHtml(r.voice) : '-'}</td>
       <td><span class="badge ${r.status}">${r.status}</span></td>
       <td class="${r.needs_auth ? 'yes' : 'no'}">${r.needs_auth ? 'Yes' : 'No'}</td>
-      <td class="${r.browser_required ? 'yes' : 'no'}">${r.browser_required ? 'Yes' : 'No'}</td>
+      <td class="${r.browser_automation ? 'yes' : 'no'}">${r.browser_automation ? 'Yes' : 'No'}</td>
+      <td class="${r.needs_manual_session ? 'yes' : 'no'}">${r.needs_manual_session ? 'Yes' : 'No'}</td>
       <td>${r.response_time_ms !== null && r.response_time_ms !== undefined ? Math.round(r.response_time_ms) : '-'}</td>
       <td class="snippet" title="${escapeHtml(r.response_snippet || r.error || '')}">${escapeHtml(r.response_snippet || r.error || '')}</td>
     </tr>
@@ -246,12 +306,12 @@ function render() {
 function renderStats(rows) {
   const total = DATA.length;
   const working = DATA.filter(r => r.status === 'working').length;
-  const instant = DATA.filter(r => r.status === 'working' && !r.needs_auth && !r.browser_required).length;
+  const instant = DATA.filter(r => r.status === 'working' && !r.needs_auth && !r.needs_manual_session).length;
   const errored = DATA.filter(r => r.status === 'error' || r.status === 'timeout').length;
   document.getElementById('stats').innerHTML = `
     <div class="stat"><div class="n">${total}</div><div class="l">Total tested</div></div>
     <div class="stat green"><div class="n">${working}</div><div class="l">Working</div></div>
-    <div class="stat green"><div class="n">${instant}</div><div class="l">Instant, no auth/browser</div></div>
+    <div class="stat green"><div class="n">${instant}</div><div class="l">Instant, no auth/login session</div></div>
     <div class="stat red"><div class="n">${errored}</div><div class="l">Failed / timed out</div></div>
     <div class="stat"><div class="n">${rows.length}</div><div class="l">Matching filters</div></div>
   `;
@@ -269,8 +329,8 @@ document.querySelectorAll('th[data-key]').forEach(th => {
   });
 });
 
-['search', 'statusFilter'].forEach(id => document.getElementById(id).addEventListener('input', render));
-['hideAuth', 'hideBrowser', 'instantOnly'].forEach(id => document.getElementById(id).addEventListener('change', render));
+['search', 'kindFilter', 'statusFilter'].forEach(id => document.getElementById(id).addEventListener('input', render));
+['hideAuth', 'hideManualSession', 'instantOnly'].forEach(id => document.getElementById(id).addEventListener('change', render));
 
 render();
 </script>
@@ -281,12 +341,17 @@ render();
 
 def write_html(data):
     results_json = json.dumps(data["results"])
+    partial_banner = (
+        '<div class="partial-banner">This run did not finish - results below are partial.</div>'
+        if data.get("partial") else ""
+    )
     html = (
         HTML_TEMPLATE
         .replace("__RESULTS_JSON__", results_json)
         .replace("__GENERATED_AT__", data["generated_at"])
         .replace("__G4F_VERSION__", str(data["g4f_version"]))
         .replace("__TOTAL__", str(data["total_pairs"]))
+        .replace("__PARTIAL_BANNER__", partial_banner)
     )
     with open(HTML_PATH, "w", encoding="utf-8") as f:
         f.write(html)
