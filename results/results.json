@@ -1,8 +1,18 @@
 {
-  "generated_at": "2026-08-22T01:16:15.980195+00:00",
+  "generated_at": "2026-08-22T08:28:10.064704+00:00",
   "g4f_version": "unknown",
   "total_pairs": 199,
   "results": [
+    {
+      "provider": "YouTube",
+      "model": "mp3",
+      "needs_auth": false,
+      "browser_required": false,
+      "status": "skipped",
+      "response_time_ms": null,
+      "error": "marked not working by g4f",
+      "response_snippet": null
+    },
     {
       "provider": "YouTube",
       "model": "1080p",
@@ -68,16 +78,6 @@
       "model": "default",
       "needs_auth": true,
       "browser_required": true,
-      "status": "skipped",
-      "response_time_ms": null,
-      "error": "marked not working by g4f",
-      "response_snippet": null
-    },
-    {
-      "provider": "YouTube",
-      "model": "mp3",
-      "needs_auth": false,
-      "browser_required": false,
       "status": "skipped",
       "response_time_ms": null,
       "error": "marked not working by g4f",
@@ -279,7 +279,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 774.7,
+      "response_time_ms": 735.5,
       "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'",
       "response_snippet": null
     },
@@ -289,7 +289,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 774.3,
+      "response_time_ms": 735.2,
       "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'",
       "response_snippet": null
     },
@@ -299,7 +299,7 @@
       "needs_auth": true,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 733.4,
+      "response_time_ms": 695.2,
       "error": "RuntimeError: GCP_SERVICE_ACCOUNT environment variable not set.",
       "response_snippet": null
     },
@@ -309,18 +309,8 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 8.6,
+      "response_time_ms": 6.1,
       "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'",
-      "response_snippet": null
-    },
-    {
-      "provider": "BlackboxPro",
-      "model": "deepseek/deepseek-chat-v3.1",
-      "needs_auth": true,
-      "browser_required": true,
-      "status": "error",
-      "response_time_ms": 99.8,
-      "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
       "response_snippet": null
     },
     {
@@ -339,7 +329,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 0.6,
+      "response_time_ms": 0.5,
       "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'",
       "response_snippet": null
     },
@@ -349,18 +339,8 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 0.5,
+      "response_time_ms": 0.7,
       "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'",
-      "response_snippet": null
-    },
-    {
-      "provider": "BlackboxPro",
-      "model": "anthropic/claude-sonnet-4.5",
-      "needs_auth": true,
-      "browser_required": true,
-      "status": "error",
-      "response_time_ms": 1031.7,
-      "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
       "response_snippet": null
     },
     {
@@ -369,28 +349,38 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 1003.5,
-      "error": "RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=2920afb1-5b4e-4025-ac7f-5be39cdae362'",
+      "response_time_ms": 884.5,
+      "error": "RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=5f983f9b-f1a2-4c67-82d2-efc84b359876'",
       "response_snippet": null
     },
     {
-      "provider": "Qwen",
-      "model": "qwen3.6-max-preview",
-      "needs_auth": false,
+      "provider": "BlackboxPro",
+      "model": "anthropic/claude-sonnet-4.5",
+      "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 2945.1,
-      "error": "RuntimeError: Response: {'ret': ['FAIL_SYS_USER_VALIDATE', 'RGV587_ERROR::SM::\u54ce\u54df\u5582,\u88ab\u6324\u7206\u5566,\u8bf7\u7a0d\u540e\u91cd\u8bd5'], 'data': {'url': 'https://chat.qwen.ai:443//api/v2/chat/completions/_____tmd_____/punish?x5secdata=xg308f8356901b56c5oae98c9b4edcfe3b5e56f5629818c1478a1787361166a-1006665701a1460942007abaac2daa33bc0105d450",
+      "response_time_ms": 1197.7,
+      "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
       "response_snippet": null
     },
     {
-      "provider": "Qwen",
-      "model": "qwen3.6-27b",
-      "needs_auth": false,
+      "provider": "BlackboxPro",
+      "model": "deepseek/deepseek-chat-v3.1",
+      "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 2096.4,
-      "error": "RuntimeError: Response: {'ret': ['FAIL_SYS_USER_VALIDATE', 'RGV587_ERROR::SM::\u54ce\u54df\u5582,\u88ab\u6324\u7206\u5566,\u8bf7\u7a0d\u540e\u91cd\u8bd5'], 'data': {'url': 'https://chat.qwen.ai:443//api/v2/chat/completions/_____tmd_____/punish?x5secdata=xgbba67fbde3f86820oa22c8a05dad87886ad01ca13232fb2a031787361166a-1006665701a1460942007abaac2daa33bc5d8a6aae",
+      "response_time_ms": 323.5,
+      "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
+      "response_snippet": null
+    },
+    {
+      "provider": "GeminiPro",
+      "model": "models/gemini-2.5-flash",
+      "needs_auth": false,
+      "browser_required": false,
+      "status": "error",
+      "response_time_ms": 296.4,
+      "error": "PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
       "response_snippet": null
     },
     {
@@ -404,23 +394,23 @@
       "response_snippet": null
     },
     {
-      "provider": "Gemini",
-      "model": "gemini-2.0-flash-thinking",
+      "provider": "AnyProvider",
+      "model": "gpt-4o-mini-tts",
       "needs_auth": false,
-      "browser_required": true,
-      "status": "working",
-      "response_time_ms": 2324.2,
-      "error": null,
-      "response_snippet": "I'm doing well, thank you! Operating at peak efficiency and ready to help out. \n\nHow can I assist you today?"
+      "browser_required": false,
+      "status": "error",
+      "response_time_ms": 2036.8,
+      "error": "RetryProviderError: RetryProvider failed:\nOpenAIFM: RateLimitError: Response 429: <!DOCTYPE html><html lang=\"en\" data-astro-cid-nbv56vs3> <head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Che",
+      "response_snippet": null
     },
     {
-      "provider": "BlackboxPro",
-      "model": "google/gemini-2.5-pro-preview-03-25",
-      "needs_auth": true,
-      "browser_required": true,
+      "provider": "AnyProvider",
+      "model": "o1",
+      "needs_auth": false,
+      "browser_required": false,
       "status": "error",
-      "response_time_ms": 68.0,
-      "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
+      "response_time_ms": 1304.0,
+      "error": "RetryProviderError: RetryProvider failed:\nAirforce: PaymentRequiredError: Error 402: Error 402: Model 'o1' requires an active subscription or a positive Pay-As-You-Go balance. Subscribe or top up at https://api.airforce/dashboard, or pick a free model from https://api.airforce/models.\nCopilot: FileN",
       "response_snippet": null
     },
     {
@@ -429,23 +419,13 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 0.9,
+      "response_time_ms": 0.7,
       "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'",
       "response_snippet": null
     },
     {
       "provider": "Grok",
       "model": "grok-4-reasoning",
-      "needs_auth": true,
-      "browser_required": true,
-      "status": "error",
-      "response_time_ms": 0.6,
-      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'",
-      "response_snippet": null
-    },
-    {
-      "provider": "MicrosoftDesigner",
-      "model": "1024x1024",
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
@@ -464,14 +444,14 @@
       "response_snippet": null
     },
     {
-      "provider": "GeminiPro",
-      "model": "models/gemini-2.5-flash",
+      "provider": "CohereForAI_C4AI_Command",
+      "model": "command-r-08-2024",
       "needs_auth": false,
       "browser_required": false,
-      "status": "error",
-      "response_time_ms": 331.2,
-      "error": "PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
-      "response_snippet": null
+      "status": "working",
+      "response_time_ms": 1132.1,
+      "error": null,
+      "response_snippet": "As an AI language model, I don't have emotions or feelings in the traditional sense, but I'm ready to assist you with any questions or tasks you may have! How can I help you today?"
     },
     {
       "provider": "AIBadgr",
@@ -479,18 +459,18 @@
       "needs_auth": true,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 0.1,
+      "response_time_ms": 0.2,
       "error": "MissingAuthError: Add a \"api_key\"",
       "response_snippet": null
     },
     {
-      "provider": "CohereForAI_C4AI_Command",
-      "model": "command-r-plus",
-      "needs_auth": false,
-      "browser_required": false,
+      "provider": "BlackboxPro",
+      "model": "google/gemini-2.5-pro-preview-03-25",
+      "needs_auth": true,
+      "browser_required": true,
       "status": "error",
-      "response_time_ms": 496.5,
-      "error": "empty response",
+      "response_time_ms": 165.5,
+      "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
       "response_snippet": null
     },
     {
@@ -529,7 +509,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 83.5,
+      "response_time_ms": 201.4,
       "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
       "response_snippet": null
     },
@@ -565,12 +545,12 @@
     },
     {
       "provider": "Qwen",
-      "model": "qwen-latest-series-invite-beta-v24",
+      "model": "qwen3.6-max-preview",
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 824.3,
-      "error": "RuntimeError: Response: {'ret': ['FAIL_SYS_USER_VALIDATE', 'RGV587_ERROR::SM::\u54ce\u54df\u5582,\u88ab\u6324\u7206\u5566,\u8bf7\u7a0d\u540e\u91cd\u8bd5'], 'data': {'url': 'https://chat.qwen.ai:443//api/v2/chat/completions/_____tmd_____/punish?x5secdata=xg66428cefe8ce07e3oa0346c8b6180d056b518f13dc123eb4951787361167a-1006665701a1460942007abaac2daa33b7052f10b3",
+      "response_time_ms": 2425.6,
+      "error": "RuntimeError: Response: {'ret': ['FAIL_SYS_USER_VALIDATE', 'RGV587_ERROR::SM::\u54ce\u54df\u5582,\u88ab\u6324\u7206\u5566,\u8bf7\u7a0d\u540e\u91cd\u8bd5'], 'data': {'url': 'https://chat.qwen.ai:443//api/v2/chat/completions/_____tmd_____/punish?x5secdata=xg402deb7dcea87256oab5e1dca2077a49a4091200d39dc88c051787387085a-1006665701a1460942007abaac2daa33bed541b712",
       "response_snippet": null
     },
     {
@@ -584,14 +564,14 @@
       "response_snippet": null
     },
     {
-      "provider": "CohereForAI_C4AI_Command",
-      "model": "command-r-plus-08-2024",
+      "provider": "Qwen",
+      "model": "qwen3.6-27b",
       "needs_auth": false,
-      "browser_required": false,
-      "status": "working",
-      "response_time_ms": 4229.5,
-      "error": null,
-      "response_snippet": "As an AI language model, I don't possess emotions or consciousness, so I don't experience feelings or sensations like a human would. I'm designed to provide information and assist users with their que"
+      "browser_required": true,
+      "status": "error",
+      "response_time_ms": 1706.9,
+      "error": "RuntimeError: Response: {'ret': ['FAIL_SYS_USER_VALIDATE', 'RGV587_ERROR::SM::\u54ce\u54df\u5582,\u88ab\u6324\u7206\u5566,\u8bf7\u7a0d\u540e\u91cd\u8bd5'], 'data': {'url': 'https://chat.qwen.ai:443//api/v2/chat/completions/_____tmd_____/punish?x5secdata=xg78af1a3a42e23b09oafa4d6cb44490fe177e9207546dab5a351787387085a-1006665701a1460942007abaac2daa33b5db13c40c",
+      "response_snippet": null
     },
     {
       "provider": "GigaChat",
@@ -599,7 +579,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 0.3,
+      "response_time_ms": 0.1,
       "error": "MissingAuthError: Missing \"api_key\"",
       "response_snippet": null
     },
@@ -629,7 +609,7 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 0.6,
+      "response_time_ms": 0.7,
       "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'",
       "response_snippet": null
     },
@@ -639,7 +619,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 0.5,
+      "response_time_ms": 0.6,
       "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'",
       "response_snippet": null
     },
@@ -649,7 +629,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 0.5,
+      "response_time_ms": 0.9,
       "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'",
       "response_snippet": null
     },
@@ -664,13 +644,13 @@
       "response_snippet": null
     },
     {
-      "provider": "CohereForAI_C4AI_Command",
-      "model": "command-r",
+      "provider": "AnyProvider",
+      "model": "gpt-4o-mini",
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 509.3,
-      "error": "empty response",
+      "response_time_ms": 219.9,
+      "error": "RetryProviderError: RetryProvider failed:\nOpenaiChat: FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/.g4f/cookies'\nAirforce: PaymentRequiredError: Error 402: Error 402: Model 'gpt-4o-mini' requires an active subscription or a positive Pay-As-You-Go balance. Subscribe or top up",
       "response_snippet": null
     },
     {
@@ -705,23 +685,33 @@
     },
     {
       "provider": "CohereForAI_C4AI_Command",
-      "model": "command-r7b-12-2024",
+      "model": "command-r-plus",
       "needs_auth": false,
       "browser_required": false,
-      "status": "working",
-      "response_time_ms": 884.2,
-      "error": null,
-      "response_snippet": "As an AI language model, I don't have feelings or emotions, so I don't experience well-being in the way humans do. However, I'm fully operational and ready to assist you with any questions or tasks yo"
+      "status": "error",
+      "response_time_ms": 521.8,
+      "error": "empty response",
+      "response_snippet": null
     },
     {
-      "provider": "Yqcloud",
-      "model": "gpt-4",
+      "provider": "Qwen",
+      "model": "qwen-latest-series-invite-beta-v24",
+      "needs_auth": false,
+      "browser_required": true,
+      "status": "error",
+      "response_time_ms": 2059.3,
+      "error": "RuntimeError: Response: {'ret': ['FAIL_SYS_USER_VALIDATE', 'RGV587_ERROR::SM::\u54ce\u54df\u5582,\u88ab\u6324\u7206\u5566,\u8bf7\u7a0d\u540e\u91cd\u8bd5'], 'data': {'url': 'https://chat.qwen.ai:443//api/v2/chat/completions/_____tmd_____/punish?x5secdata=xg6f086425d14a5beeoa3f47d7201a6441989fe6abee1baa1bfa1787387086a-1006665701a1460942007abaac2daa33b37f71a3c2",
+      "response_snippet": null
+    },
+    {
+      "provider": "CohereForAI_C4AI_Command",
+      "model": "command-r-plus-08-2024",
       "needs_auth": false,
       "browser_required": false,
       "status": "working",
-      "response_time_ms": 2030.7,
+      "response_time_ms": 4220.0,
       "error": null,
-      "response_snippet": "sorry, \u60a8\u7684ip\u5df2\u7531\u4e8e\u89e6\u53d1\u9632\u6ee5\u7528\u68c0\u6d4b\u800c\u88ab\u5c01\u7981\uff0c\u5982\u679c\u4f60\u4f7f\u7528\u4ee3\u7406 \u8bf7\u5173\u95ed\u4ee3\u7406\u540e\u518d\u8bd5,\u672c\u670d\u52a1\u7f51\u5740\u662fhttps://iai.aichatos8.com.cn/ \u5982\u679c\u4f60\u4e0d\u5728\u672c\u7f51\u7ad9\uff0c\u8bf7\u524d\u5f80\u672c\u7f51\u7ad9\u4f7f\u7528\u5373\u53ef \u5982\u9700\u5408\u4f5c\u63a5\u53e3\u8c03\u7528\u8bf7\u8054\u7cfb\u5fae\u4fe1kelemm220 \u6216\u8005\u524d\u5f80 https://binjie09.shop \u81ea\u52a9\u8d2d\u4e70key, \u8ba4\u4e3a\u662f\u8bef\u5c01\u9700\u8981\u89e3\u5c01\u7684\u8bf7\u524d\u5f80https://www.ip.cn/ \u67e5\u8be2ip\u4fe1\u606f,\u5e76\u53d1\u9001"
+      "response_snippet": "As an AI language model, I don't possess emotions or physical well-being, so I don't experience feelings or health conditions in the same way humans do. I'm designed to provide information and assist "
     },
     {
       "provider": "Custom",
@@ -729,29 +719,19 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 2.5,
-      "error": "ConnectionError: Failed to perform, curl: (7) Failed to connect to localhost:8080 after 0 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "response_time_ms": 2.2,
+      "error": "ConnectionError: Failed to perform, curl: (7) Failed to connect to localhost:8080 after 1 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
       "response_snippet": null
     },
     {
-      "provider": "CachedSearch",
-      "model": "default",
+      "provider": "CohereForAI_C4AI_Command",
+      "model": "command-r",
       "needs_auth": false,
-      "browser_required": true,
-      "status": "working",
-      "response_time_ms": 2614.1,
-      "error": null,
-      "response_snippet": "### Title: How are you?\n\nThe All-Ukrainian mental health program \"How are you?\" is an initiative aimed at building a quality system of providing services in the field of psychosocial support and devel"
-    },
-    {
-      "provider": "Perplexity",
-      "model": "gpt5_thinking",
-      "needs_auth": false,
-      "browser_required": true,
-      "status": "working",
-      "response_time_ms": 7723.1,
-      "error": null,
-      "response_snippet": "est."
+      "browser_required": false,
+      "status": "error",
+      "response_time_ms": 2185.9,
+      "error": "empty response",
+      "response_snippet": null
     },
     {
       "provider": "Replicate",
@@ -774,14 +754,14 @@
       "response_snippet": null
     },
     {
-      "provider": "CohereForAI_C4AI_Command",
-      "model": "command-r-08-2024",
+      "provider": "CachedSearch",
+      "model": "default",
       "needs_auth": false,
-      "browser_required": false,
+      "browser_required": true,
       "status": "working",
-      "response_time_ms": 7512.4,
+      "response_time_ms": 2075.5,
       "error": null,
-      "response_snippet": "As an AI language model, I don't have feelings or emotions, so I don't possess a subjective experience of 'being' in the same way that humans do. However, I am designed to assist you to the best of my"
+      "response_snippet": "### Title: How are you?\n\nThe All-Ukrainian mental health program \"How are you?\" is an initiative aimed at building a quality system of providing services in the field of psychosocial support and devel"
     },
     {
       "provider": "GigaChat",
@@ -789,8 +769,28 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 0.2,
+      "response_time_ms": 0.1,
       "error": "MissingAuthError: Missing \"api_key\"",
+      "response_snippet": null
+    },
+    {
+      "provider": "CohereForAI_C4AI_Command",
+      "model": "command-r7b-12-2024",
+      "needs_auth": false,
+      "browser_required": false,
+      "status": "working",
+      "response_time_ms": 2706.9,
+      "error": null,
+      "response_snippet": "As an AI language model, I don't have feelings or emotions, so I don't experience well-being in the way humans do. However, I'm fully operational and ready to assist you with any questions or tasks yo"
+    },
+    {
+      "provider": "PerplexityApi",
+      "model": "llama-3-8b-instruct",
+      "needs_auth": true,
+      "browser_required": false,
+      "status": "error",
+      "response_time_ms": 0.4,
+      "error": "MissingAuthError: Add a \"api_key\"",
       "response_snippet": null
     },
     {
@@ -799,18 +799,8 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 174.4,
+      "response_time_ms": 407.8,
       "error": "PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
-      "response_snippet": null
-    },
-    {
-      "provider": "PerplexityApi",
-      "model": "llama-3-8b-instruct",
-      "needs_auth": true,
-      "browser_required": false,
-      "status": "error",
-      "response_time_ms": 0.1,
-      "error": "MissingAuthError: Add a \"api_key\"",
       "response_snippet": null
     },
     {
@@ -819,19 +809,9 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 78.0,
+      "response_time_ms": 88.3,
       "error": "ResponseStatusError: Response 404: Not Found",
       "response_snippet": null
-    },
-    {
-      "provider": "Perplexity",
-      "model": "o3",
-      "needs_auth": false,
-      "browser_required": true,
-      "status": "working",
-      "response_time_ms": 7745.5,
-      "error": null,
-      "response_snippet": "est."
     },
     {
       "provider": "Groq",
@@ -839,29 +819,19 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 142.8,
+      "response_time_ms": 152.3,
       "error": "PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
       "response_snippet": null
     },
     {
-      "provider": "Perplexity",
-      "model": "gpt5",
+      "provider": "Yqcloud",
+      "model": "gpt-4",
       "needs_auth": false,
-      "browser_required": true,
+      "browser_required": false,
       "status": "working",
-      "response_time_ms": 7658.6,
+      "response_time_ms": 3925.4,
       "error": null,
-      "response_snippet": "est."
-    },
-    {
-      "provider": "OpenaiAccount",
-      "model": "gpt-4.1",
-      "needs_auth": true,
-      "browser_required": true,
-      "status": "error",
-      "response_time_ms": 7240.3,
-      "error": "Exception: \n                ---------------------\n                Failed to connect to browser\n                ---------------------\n                One of the causes could be when you are running as root.\n                In that case you need to pass no_sandbox=True\n                ",
-      "response_snippet": null
+      "response_snippet": "I'm doing great, thanks for asking! I'm fully ready to help you with any questions, tasks or ideas you have today. Is there anything specific you'd like to talk about or need assistance with?"
     },
     {
       "provider": "Anthropic",
@@ -874,14 +844,14 @@
       "response_snippet": null
     },
     {
-      "provider": "AnyProvider",
-      "model": "gpt-4o-mini-tts",
+      "provider": "Perplexity",
+      "model": "gpt5_thinking",
       "needs_auth": false,
-      "browser_required": false,
-      "status": "timeout",
-      "response_time_ms": 25000.0,
-      "error": "no response within 25s",
-      "response_snippet": null
+      "browser_required": true,
+      "status": "working",
+      "response_time_ms": 7594.8,
+      "error": null,
+      "response_snippet": "est."
     },
     {
       "provider": "GigaChat",
@@ -899,7 +869,7 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 227.9,
+      "response_time_ms": 306.4,
       "error": "PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
       "response_snippet": null
     },
@@ -919,7 +889,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 73.6,
+      "response_time_ms": 87.8,
       "error": "ResponseStatusError: Response 404: Not Found",
       "response_snippet": null
     },
@@ -929,18 +899,28 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 2.4,
+      "response_time_ms": 2.6,
       "error": "MissingAuthError: DeepSeekAuth: No authentication found. Please add a DeepSeek HAR file to har_and_cookies/ directory with an authorization token.",
       "response_snippet": null
     },
     {
-      "provider": "AnyProvider",
-      "model": "o1",
+      "provider": "Perplexity",
+      "model": "o3",
       "needs_auth": false,
-      "browser_required": false,
-      "status": "timeout",
-      "response_time_ms": 25000.0,
-      "error": "no response within 25s",
+      "browser_required": true,
+      "status": "working",
+      "response_time_ms": 7949.5,
+      "error": null,
+      "response_snippet": "est."
+    },
+    {
+      "provider": "Grok",
+      "model": "grok-3-mini",
+      "needs_auth": true,
+      "browser_required": true,
+      "status": "error",
+      "response_time_ms": 8835.2,
+      "error": "Exception: \n                ---------------------\n                Failed to connect to browser\n                ---------------------\n                One of the causes could be when you are running as root.\n                In that case you need to pass no_sandbox=True\n                ",
       "response_snippet": null
     },
     {
@@ -949,18 +929,8 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 20018.4,
-      "error": "RuntimeError: Failed to start shared Chrome on port 52615",
-      "response_snippet": null
-    },
-    {
-      "provider": "Grok",
-      "model": "grok-3-mini",
-      "needs_auth": true,
-      "browser_required": true,
-      "status": "timeout",
-      "response_time_ms": 25000.0,
-      "error": "no response within 25s",
+      "response_time_ms": 20042.1,
+      "error": "RuntimeError: Failed to start shared Chrome on port 54747",
       "response_snippet": null
     },
     {
@@ -969,14 +939,14 @@
       "needs_auth": true,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 0.1,
+      "response_time_ms": 0.2,
       "error": "MissingAuthError: Add a \"api_key\"",
       "response_snippet": null
     },
     {
-      "provider": "Copilot",
-      "model": "Copilot",
-      "needs_auth": false,
+      "provider": "OpenaiAccount",
+      "model": "gpt-4.1",
+      "needs_auth": true,
       "browser_required": true,
       "status": "timeout",
       "response_time_ms": 25000.0,
@@ -999,13 +969,13 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 27.3,
+      "response_time_ms": 92.4,
       "error": "RateLimitError: Response 429: <!DOCTYPE html><html lang=\"en\" data-astro-cid-nbv56vs3> <head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-jlpqxu",
       "response_snippet": null
     },
     {
-      "provider": "OpenaiChat",
-      "model": "auto",
+      "provider": "Copilot",
+      "model": "Copilot",
       "needs_auth": false,
       "browser_required": true,
       "status": "timeout",
@@ -1019,7 +989,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 80.6,
+      "response_time_ms": 78.4,
       "error": "ResponseStatusError: Response 404: Not Found",
       "response_snippet": null
     },
@@ -1029,7 +999,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 2.6,
+      "response_time_ms": 2.4,
       "error": "MissingAuthError: DeepSeekAuth: No authentication found. Please add a DeepSeek HAR file to har_and_cookies/ directory with an authorization token.",
       "response_snippet": null
     },
@@ -1039,15 +1009,15 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 2736.8,
-      "error": "ResponseStatusError: Response 403: {'success': False, 'data': {'message': 'Security check is required. Please refresh the page and try again.'}}",
+      "response_time_ms": 565.4,
+      "error": "RuntimeError: Failed to extract nonce from PhindAi response",
       "response_snippet": null
     },
     {
-      "provider": "AnyProvider",
-      "model": "gpt-4o-mini",
+      "provider": "OpenaiChat",
+      "model": "auto",
       "needs_auth": false,
-      "browser_required": false,
+      "browser_required": true,
       "status": "timeout",
       "response_time_ms": 25000.0,
       "error": "no response within 25s",
@@ -1059,7 +1029,7 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 50.2,
+      "response_time_ms": 75.1,
       "error": "HTTPError: HTTP Error 403: ",
       "response_snippet": null
     },
@@ -1089,7 +1059,7 @@
       "needs_auth": true,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 0.4,
+      "response_time_ms": 0.3,
       "error": "MissingAuthError: GitHub Copilot OAuth not configured. Please run 'g4f auth github-copilot' to authenticate.",
       "response_snippet": null
     },
@@ -1099,7 +1069,7 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 72.7,
+      "response_time_ms": 65.9,
       "error": "RateLimitError: Response 429: <!DOCTYPE html><html lang=\"en\" data-astro-cid-nbv56vs3> <head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-jlpqxu",
       "response_snippet": null
     },
@@ -1109,8 +1079,8 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 505.1,
-      "error": "ResponseStatusError: Response 403: {'success': False, 'data': {'message': 'Security check is required. Please refresh the page and try again.'}}",
+      "response_time_ms": 391.3,
+      "error": "RuntimeError: Failed to extract nonce from PhindAi response",
       "response_snippet": null
     },
     {
@@ -1119,7 +1089,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 74.6,
+      "response_time_ms": 80.4,
       "error": "ResponseStatusError: Response 404: Not Found",
       "response_snippet": null
     },
@@ -1129,7 +1099,7 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 34.5,
+      "response_time_ms": 81.6,
       "error": "MissingAuthError: Response 401: <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're",
       "response_snippet": null
     },
@@ -1149,7 +1119,7 @@
       "needs_auth": true,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 0.1,
+      "response_time_ms": 0.2,
       "error": "MissingAuthError: Add a \"api_key\"",
       "response_snippet": null
     },
@@ -1189,7 +1159,7 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 42.2,
+      "response_time_ms": 90.8,
       "error": "RateLimitError: Response 429: <!DOCTYPE html><html lang=\"en\" data-astro-cid-nbv56vs3> <head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-jlpqxu",
       "response_snippet": null
     },
@@ -1209,7 +1179,7 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 2.7,
+      "response_time_ms": 2.6,
       "error": "MissingAuthError: Claude cookie not found. Please set the 'CLAUDE_COOKIE' environment variable.",
       "response_snippet": null
     },
@@ -1219,7 +1189,7 @@
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 2.4,
+      "response_time_ms": 2.3,
       "error": "RuntimeError: hCaptcha accessibility cookie required: log in at https://dashboard.hcaptcha.com/signup?type=accessibility in your browser, or pass hc_accessibility=\"...\".",
       "response_snippet": null
     },
@@ -1254,19 +1224,19 @@
       "response_snippet": null
     },
     {
-      "provider": "HuggingChat",
-      "model": "default",
-      "needs_auth": true,
-      "browser_required": true,
-      "status": "timeout",
-      "response_time_ms": 25000.0,
-      "error": "no response within 25s",
+      "provider": "Airforce",
+      "model": "gpt-4o-mini",
+      "needs_auth": false,
+      "browser_required": false,
+      "status": "error",
+      "response_time_ms": 1345.1,
+      "error": "PaymentRequiredError: Error 402: Error 402: Model 'gpt-4o-mini' requires an active subscription or a positive Pay-As-You-Go balance. Subscribe or top up at https://api.airforce/dashboard, or pick a free model from https://api.airforce/models.",
       "response_snippet": null
     },
     {
-      "provider": "OpenaiChat",
-      "model": "gpt-5-1",
-      "needs_auth": false,
+      "provider": "HuggingChat",
+      "model": "default",
+      "needs_auth": true,
       "browser_required": true,
       "status": "timeout",
       "response_time_ms": 25000.0,
@@ -1289,7 +1259,7 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 22.0,
+      "response_time_ms": 115.6,
       "error": "RateLimitError: Response 429: <!DOCTYPE html><html lang=\"en\" data-astro-cid-nbv56vs3> <head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-jlpqxu",
       "response_snippet": null
     },
@@ -1304,13 +1274,33 @@
       "response_snippet": null
     },
     {
+      "provider": "OpenaiChat",
+      "model": "gpt-5-1",
+      "needs_auth": false,
+      "browser_required": true,
+      "status": "timeout",
+      "response_time_ms": 25000.0,
+      "error": "no response within 25s",
+      "response_snippet": null
+    },
+    {
       "provider": "Cloudflare",
       "model": "deepseek-coder-6.7b",
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 20019.8,
-      "error": "RuntimeError: Failed to start shared Chrome on port 58207",
+      "response_time_ms": 20019.9,
+      "error": "RuntimeError: Failed to start shared Chrome on port 47621",
+      "response_snippet": null
+    },
+    {
+      "provider": "FenayAI",
+      "model": "gpt-oss-120b",
+      "needs_auth": true,
+      "browser_required": false,
+      "status": "error",
+      "response_time_ms": 20019.9,
+      "error": "MissingAuthError: Add a \"api_key\"",
       "response_snippet": null
     },
     {
@@ -1354,42 +1344,12 @@
       "response_snippet": null
     },
     {
-      "provider": "FenayAI",
-      "model": "gpt-oss-120b",
-      "needs_auth": true,
-      "browser_required": false,
-      "status": "error",
-      "response_time_ms": 2.0,
-      "error": "MissingAuthError: Add a \"api_key\"",
-      "response_snippet": null
-    },
-    {
-      "provider": "Airforce",
-      "model": "gpt-4o-mini",
-      "needs_auth": false,
-      "browser_required": false,
-      "status": "timeout",
-      "response_time_ms": 25000.0,
-      "error": "no response within 25s",
-      "response_snippet": null
-    },
-    {
-      "provider": "HuggingSpace",
-      "model": "command-a-03-2025",
-      "needs_auth": false,
-      "browser_required": false,
-      "status": "error",
-      "response_time_ms": 6.5,
-      "error": "TypeError: argument of type 'NoneType' is not iterable",
-      "response_snippet": null
-    },
-    {
       "provider": "BingCreateImages",
       "model": "dall-e-3",
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 6.4,
+      "response_time_ms": 7.0,
       "error": "MissingAuthError: Missing \"_U\" cookie",
       "response_snippet": null
     },
@@ -1399,8 +1359,18 @@
       "needs_auth": true,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 624.2,
+      "response_time_ms": 7.0,
       "error": "MissingAuthError: Add a \"api_key\"",
+      "response_snippet": null
+    },
+    {
+      "provider": "OpenAIFM",
+      "model": "calm",
+      "needs_auth": false,
+      "browser_required": false,
+      "status": "error",
+      "response_time_ms": 140.3,
+      "error": "RateLimitError: Response 429: <!DOCTYPE html><html lang=\"en\" data-astro-cid-nbv56vs3> <head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-jlpqxu",
       "response_snippet": null
     },
     {
@@ -1409,7 +1379,7 @@
       "needs_auth": true,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 0.3,
+      "response_time_ms": 0.1,
       "error": "MissingAuthError: Add a \"api_key\"",
       "response_snippet": null
     },
@@ -1419,8 +1389,8 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 20023.5,
-      "error": "RuntimeError: Failed to start shared Chrome on port 35601",
+      "response_time_ms": 20022.0,
+      "error": "RuntimeError: Failed to start shared Chrome on port 60659",
       "response_snippet": null
     },
     {
@@ -1444,24 +1414,24 @@
       "response_snippet": null
     },
     {
-      "provider": "OpenAIFM",
-      "model": "calm",
-      "needs_auth": false,
-      "browser_required": false,
-      "status": "error",
-      "response_time_ms": 23427.0,
-      "error": "RateLimitError: Response 429: <!DOCTYPE html><html lang=\"en\" data-astro-cid-nbv56vs3> <head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-jlpqxu",
-      "response_snippet": null
-    },
-    {
       "provider": "WhiteRabbitNeo",
       "model": "default",
       "needs_auth": true,
       "browser_required": true,
       "status": "working",
-      "response_time_ms": 23554.7,
+      "response_time_ms": 22807.2,
       "error": null,
       "response_snippet": "<!DOCTYPE html><!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Thu Apr 16 2026 20:54:54 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain=\"www.deephat.ai"
+    },
+    {
+      "provider": "PollinationsAudio",
+      "model": "elevenlabs",
+      "needs_auth": false,
+      "browser_required": false,
+      "status": "error",
+      "response_time_ms": 22800.3,
+      "error": "RateLimitError: Response 402: Insufficient balance. This request costs ~0.0091 pollen, but your available balance is 0.0000.",
+      "response_snippet": null
     },
     {
       "provider": "GlhfChat",
@@ -1469,7 +1439,7 @@
       "needs_auth": true,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 0.1,
+      "response_time_ms": 0.9,
       "error": "MissingAuthError: Add a \"api_key\"",
       "response_snippet": null
     },
@@ -1479,19 +1449,19 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 42.7,
+      "response_time_ms": 76.5,
       "error": "RateLimitError: Response 429: <!DOCTYPE html><html lang=\"en\" data-astro-cid-nbv56vs3> <head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-jlpqxu",
       "response_snippet": null
     },
     {
-      "provider": "PollinationsAudio",
-      "model": "elevenlabs",
+      "provider": "HuggingSpace",
+      "model": "command-a-03-2025",
       "needs_auth": false,
       "browser_required": false,
-      "status": "error",
-      "response_time_ms": 24668.9,
-      "error": "RateLimitError: Response 402: Insufficient balance. This request costs ~0.0092 pollen, but your available balance is 0.0000.",
-      "response_snippet": null
+      "status": "working",
+      "response_time_ms": 23840.8,
+      "error": null,
+      "response_snippet": "As an AI, I don't have feelings or physical states, so I don't experience health or emotions in the way humans do. However, I'm fully operational and ready to assist you with any questions or tasks yo"
     },
     {
       "provider": "Cloudflare",
@@ -1499,8 +1469,8 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 20022.5,
-      "error": "RuntimeError: Failed to start shared Chrome on port 48835",
+      "response_time_ms": 20020.4,
+      "error": "RuntimeError: Failed to start shared Chrome on port 34789",
       "response_snippet": null
     },
     {
@@ -1525,13 +1495,13 @@
     },
     {
       "provider": "BlackForestLabs_Flux1Dev",
-      "model": "flux-dev",
+      "model": "flux",
       "needs_auth": false,
       "browser_required": false,
-      "status": "working",
-      "response_time_ms": 21310.5,
-      "error": null,
-      "response_snippet": "Falling back to IP-based quotas (EncryptionError)\n\n[![How are you?](https://black-forest-labs-flux-1-dev.hf.space/gradio_api/file=/tmp/gradio/af21a8b606b4aee4c245ec052c73a1204ded91ae332a927088a2e02830"
+      "status": "error",
+      "response_time_ms": 387.5,
+      "error": "ResponseError: You have exceeded your ZeroGPU quota (112s requested vs. 28s left). Try again in 6:23:16. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens",
+      "response_snippet": null
     },
     {
       "provider": "CopilotApp",
@@ -1539,8 +1509,8 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 218.4,
-      "error": "RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=63e2e664-4994-42ae-95b4-fe9e30d9a16d'",
+      "response_time_ms": 172.9,
+      "error": "RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=16ec83ce-abe6-44e5-8f92-b309c1cc744b'",
       "response_snippet": null
     },
     {
@@ -1549,7 +1519,7 @@
       "needs_auth": true,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 0.2,
+      "response_time_ms": 0.1,
       "error": "MissingAuthError: Add a \"api_key\"",
       "response_snippet": null
     },
@@ -1579,8 +1549,8 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 20022.4,
-      "error": "RuntimeError: Failed to start shared Chrome on port 54193",
+      "response_time_ms": 20021.3,
+      "error": "RuntimeError: Failed to start shared Chrome on port 59373",
       "response_snippet": null
     },
     {
@@ -1629,7 +1599,7 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 1.6,
+      "response_time_ms": 4.1,
       "error": "ValueError: MarkItDown requires media to be provided.",
       "response_snippet": null
     },
@@ -1639,18 +1609,8 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 1.3,
+      "response_time_ms": 4.9,
       "error": "ValueError: No media files provided for image generation.",
-      "response_snippet": null
-    },
-    {
-      "provider": "GlhfChat",
-      "model": "hf:huihui-ai/Llama-3.3-70B-Instruct-abliterated",
-      "needs_auth": true,
-      "browser_required": false,
-      "status": "error",
-      "response_time_ms": 0.4,
-      "error": "MissingAuthError: Add a \"api_key\"",
       "response_snippet": null
     },
     {
@@ -1659,9 +1619,19 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "working",
-      "response_time_ms": 20254.1,
+      "response_time_ms": 20594.9,
       "error": null,
-      "response_snippet": "I'm doing well, thank you! Ready to dive into whatever project, puzzle, or question you've got on your mind today. \n\nHow are things going on your end?"
+      "response_snippet": "Doing great, thanks for asking! Ready to dive into whatever project, question, or rabbit hole you've got on your mind today. \n\nHow are you doing, and what are we tackling?"
+    },
+    {
+      "provider": "GlhfChat",
+      "model": "hf:huihui-ai/Llama-3.3-70B-Instruct-abliterated",
+      "needs_auth": true,
+      "browser_required": false,
+      "status": "error",
+      "response_time_ms": 0.3,
+      "error": "MissingAuthError: Add a \"api_key\"",
+      "response_snippet": null
     },
     {
       "provider": "OpenRouterFree",
@@ -1669,8 +1639,18 @@
       "needs_auth": true,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 2.8,
+      "response_time_ms": 0.4,
       "error": "MissingAuthError: Add a \"api_key\"",
+      "response_snippet": null
+    },
+    {
+      "provider": "CopilotApp",
+      "model": "reasoning",
+      "needs_auth": false,
+      "browser_required": false,
+      "status": "error",
+      "response_time_ms": 132.0,
+      "error": "RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=c4a7ca17-1428-468d-8613-f49a9a95c1d2'",
       "response_snippet": null
     },
     {
@@ -1679,8 +1659,8 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 20022.6,
-      "error": "RuntimeError: Failed to start shared Chrome on port 44491",
+      "response_time_ms": 20020.6,
+      "error": "RuntimeError: Failed to start shared Chrome on port 55467",
       "response_snippet": null
     },
     {
@@ -1699,13 +1679,13 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 2.3,
+      "response_time_ms": 4.3,
       "error": "MissingAuthError: Gemini session is unauthenticated; model 'gemini-3.1-pro' would fall back to Flash",
       "response_snippet": null
     },
     {
       "provider": "BlackForestLabs_Flux1Dev",
-      "model": "flux",
+      "model": "flux-dev",
       "needs_auth": false,
       "browser_required": false,
       "status": "timeout",
@@ -1714,23 +1694,33 @@
       "response_snippet": null
     },
     {
-      "provider": "BlackboxPro",
-      "model": "openai/gpt-5",
-      "needs_auth": true,
+      "provider": "Perplexity",
+      "model": "gpt5",
+      "needs_auth": false,
       "browser_required": true,
-      "status": "error",
-      "response_time_ms": 104.0,
-      "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
-      "response_snippet": null
+      "status": "working",
+      "response_time_ms": 20162.7,
+      "error": null,
+      "response_snippet": "est."
+    },
+    {
+      "provider": "Gemini",
+      "model": "gemini-3.5-flash-lite",
+      "needs_auth": false,
+      "browser_required": true,
+      "status": "working",
+      "response_time_ms": 20170.4,
+      "error": null,
+      "response_snippet": "Doing well and fully operational, thanks for asking! Ready to tackle whatever is on your mind today\u2014whether you need to untangle a complex problem, brainstorm new ideas, or just get a straight answer "
     },
     {
       "provider": "CopilotApp",
-      "model": "reasoning",
+      "model": "chat",
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 20166.6,
-      "error": "RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=bb07baed-7b9c-40a3-89a8-4d624e19244b'",
+      "response_time_ms": 148.4,
+      "error": "RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=4d0b3856-5976-4b63-9b7f-7d9486e50d57'",
       "response_snippet": null
     },
     {
@@ -1759,18 +1749,18 @@
       "needs_auth": false,
       "browser_required": false,
       "status": "error",
-      "response_time_ms": 275.6,
+      "response_time_ms": 194.7,
       "error": "ResponseStatusError: Response 403: Fetch home failed",
       "response_snippet": null
     },
     {
-      "provider": "CopilotApp",
-      "model": "chat",
-      "needs_auth": false,
-      "browser_required": false,
+      "provider": "BlackboxPro",
+      "model": "openai/gpt-5",
+      "needs_auth": true,
+      "browser_required": true,
       "status": "error",
-      "response_time_ms": 203.6,
-      "error": "RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=e6788941-c67a-4246-9eed-17c975d59e86'",
+      "response_time_ms": 204.9,
+      "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
       "response_snippet": null
     },
     {
@@ -1779,18 +1769,8 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 20025.1,
-      "error": "RuntimeError: Failed to start shared Chrome on port 57061",
-      "response_snippet": null
-    },
-    {
-      "provider": "AnyProvider",
-      "model": "default",
-      "needs_auth": false,
-      "browser_required": false,
-      "status": "timeout",
-      "response_time_ms": 25000.0,
-      "error": "no response within 25s",
+      "response_time_ms": 20024.5,
+      "error": "RuntimeError: Failed to start shared Chrome on port 36679",
       "response_snippet": null
     },
     {
@@ -1814,33 +1794,43 @@
       "response_snippet": null
     },
     {
+      "provider": "AnyProvider",
+      "model": "default",
+      "needs_auth": false,
+      "browser_required": false,
+      "status": "timeout",
+      "response_time_ms": 25000.0,
+      "error": "no response within 25s",
+      "response_snippet": null
+    },
+    {
       "provider": "Perplexity",
       "model": "auto",
       "needs_auth": false,
       "browser_required": true,
       "status": "working",
-      "response_time_ms": 20339.8,
+      "response_time_ms": 20236.4,
       "error": null,
       "response_snippet": "est."
     },
     {
       "provider": "Gemini",
-      "model": "gemini-3.5-flash-lite",
+      "model": "gemini-2.0-flash-thinking",
       "needs_auth": false,
       "browser_required": true,
       "status": "working",
-      "response_time_ms": 40381.7,
+      "response_time_ms": 20239.2,
       "error": null,
-      "response_snippet": "I'm doing well, thanks for asking! Ready to dive into whatever project, question, or problem you're tackling today. \n\nHow are you doing, and what's on your mind?"
+      "response_snippet": "I'm doing well, thanks for asking! Operating at full speed and ready to tackle whatever you've got on your mind today. \n\nHow are you doing, and what are we working on?"
     },
     {
-      "provider": "BlackboxPro",
-      "model": "x-ai/grok-4",
-      "needs_auth": true,
-      "browser_required": true,
+      "provider": "CopilotApp",
+      "model": "study",
+      "needs_auth": false,
+      "browser_required": false,
       "status": "error",
-      "response_time_ms": 87.9,
-      "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
+      "response_time_ms": 125.0,
+      "error": "RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=3b288415-60b9-4966-8903-147f637ac059'",
       "response_snippet": null
     },
     {
@@ -1854,23 +1844,33 @@
       "response_snippet": null
     },
     {
-      "provider": "CopilotApp",
-      "model": "study",
-      "needs_auth": false,
-      "browser_required": false,
-      "status": "error",
-      "response_time_ms": 190.8,
-      "error": "RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=f61ec016-1259-4a51-b1bc-2f2875408b43'",
-      "response_snippet": null
-    },
-    {
       "provider": "MetaAIAccount",
       "model": "meta-ai",
       "needs_auth": true,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 203.8,
+      "response_time_ms": 157.3,
       "error": "ResponseStatusError: Response 403: Fetch home failed",
+      "response_snippet": null
+    },
+    {
+      "provider": "BlackboxPro",
+      "model": "x-ai/grok-4",
+      "needs_auth": true,
+      "browser_required": true,
+      "status": "error",
+      "response_time_ms": 226.8,
+      "error": "ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'",
+      "response_snippet": null
+    },
+    {
+      "provider": "Qwen",
+      "model": "qwen3.7-max",
+      "needs_auth": false,
+      "browser_required": true,
+      "status": "error",
+      "response_time_ms": 20609.0,
+      "error": "RuntimeError: Response: {'ret': ['FAIL_SYS_USER_VALIDATE', 'RGV587_ERROR::SM::\u54ce\u54df\u5582,\u88ab\u6324\u7206\u5566,\u8bf7\u7a0d\u540e\u91cd\u8bd5'], 'data': {'url': 'https://chat.qwen.ai:443//api/v2/chat/completions/_____tmd_____/punish?x5secdata=xge7bdf3547625f50coa66db4153387ddcebe1675f39bebccfec1787387264a-1006665701a1460942007abaac2daa33b45381fee9",
       "response_snippet": null
     },
     {
@@ -1884,44 +1884,14 @@
       "response_snippet": null
     },
     {
-      "provider": "AnyProvider",
-      "model": "gpt-4",
-      "needs_auth": false,
-      "browser_required": false,
-      "status": "working",
-      "response_time_ms": 20507.3,
-      "error": null,
-      "response_snippet": "sorry, \u60a8\u7684ip\u5df2\u7531\u4e8e\u89e6\u53d1\u9632\u6ee5\u7528\u68c0\u6d4b\u800c\u88ab\u5c01\u7981\uff0c\u5982\u679c\u4f60\u4f7f\u7528\u4ee3\u7406 \u8bf7\u5173\u95ed\u4ee3\u7406\u540e\u518d\u8bd5,\u672c\u670d\u52a1\u7f51\u5740\u662fhttps://iai.aichatos8.com.cn/ \u5982\u679c\u4f60\u4e0d\u5728\u672c\u7f51\u7ad9\uff0c\u8bf7\u524d\u5f80\u672c\u7f51\u7ad9\u4f7f\u7528\u5373\u53ef \u5982\u9700\u5408\u4f5c\u63a5\u53e3\u8c03\u7528\u8bf7\u8054\u7cfb\u5fae\u4fe1kelemm220 \u6216\u8005\u524d\u5f80 https://binjie09.shop \u81ea\u52a9\u8d2d\u4e70key, \u8ba4\u4e3a\u662f\u8bef\u5c01\u9700\u8981\u89e3\u5c01\u7684\u8bf7\u524d\u5f80https://www.ip.cn/ \u67e5\u8be2ip\u4fe1\u606f,\u5e76\u53d1\u9001"
-    },
-    {
-      "provider": "Qwen",
-      "model": "qwen3.7-max",
-      "needs_auth": false,
-      "browser_required": true,
-      "status": "error",
-      "response_time_ms": 20771.9,
-      "error": "RuntimeError: Response: {'ret': ['FAIL_SYS_USER_VALIDATE', 'RGV587_ERROR::SM::\u54ce\u54df\u5582,\u88ab\u6324\u7206\u5566,\u8bf7\u7a0d\u540e\u91cd\u8bd5'], 'data': {'url': 'https://chat.qwen.ai:443//api/v2/chat/completions/_____tmd_____/punish?x5secdata=xg3cccfbebbcb32b9boaa4ee09890e1ae27ee2d129036673388e1787361350a-1006665701a1460942007abaac2daa33b9da6c18b1",
-      "response_snippet": null
-    },
-    {
       "provider": "Qwen",
       "model": "qwen3.6-plus",
       "needs_auth": false,
       "browser_required": true,
       "status": "error",
-      "response_time_ms": 647.4,
-      "error": "RuntimeError: Response: {'ret': ['FAIL_SYS_USER_VALIDATE', 'RGV587_ERROR::SM::\u54ce\u54df\u5582,\u88ab\u6324\u7206\u5566,\u8bf7\u7a0d\u540e\u91cd\u8bd5'], 'data': {'url': 'https://chat.qwen.ai:443//api/v2/chat/completions/_____tmd_____/punish?x5secdata=xg3d3558745da4e48doacd7e01b776f7151e1fe8ee0f94247def1787361351a-1006665701a1460942007abaac2daa33bfb2ad65bf",
+      "response_time_ms": 696.2,
+      "error": "RuntimeError: Response: {'ret': ['FAIL_SYS_USER_VALIDATE', 'RGV587_ERROR::SM::\u54ce\u54df\u5582,\u88ab\u6324\u7206\u5566,\u8bf7\u7a0d\u540e\u91cd\u8bd5'], 'data': {'url': 'https://chat.qwen.ai:443//api/v2/chat/completions/_____tmd_____/punish?x5secdata=xg727c4a9d4de127a8oa23603c0d81c7a167fa07c378075ad28c1787387264a-1006665701a1460942007abaac2daa33b1ea3033ae",
       "response_snippet": null
-    },
-    {
-      "provider": "CohereForAI_C4AI_Command",
-      "model": "command-a-03-2025",
-      "needs_auth": false,
-      "browser_required": false,
-      "status": "working",
-      "response_time_ms": 1186.6,
-      "error": null,
-      "response_snippet": "As an AI language model, I don't have feelings or emotions, so I don't experience well-being in the same way humans do. However, I'm functioning properly and ready to assist you with any questions or "
     },
     {
       "provider": "Gemini",
@@ -1929,9 +1899,19 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "working",
-      "response_time_ms": 2468.6,
+      "response_time_ms": 2149.1,
       "error": null,
-      "response_snippet": "I'm doing well, thank you! Operating at peak capacity and ready to jump into whatever you're working on today. \n\nHow are things going on your end, and what can I help you tackle?"
+      "response_snippet": "Doing great, thanks for asking! Ready to dive into whatever project, question, or deep dive you've got on your mind today. \n\nWhat are we tackling?"
+    },
+    {
+      "provider": "AnyProvider",
+      "model": "gpt-4",
+      "needs_auth": false,
+      "browser_required": false,
+      "status": "working",
+      "response_time_ms": 22858.3,
+      "error": null,
+      "response_snippet": "I'm doing well, thank you! It's currently August 22, 2026, 08:27 UTC. How can I assist you today?"
     },
     {
       "provider": "Gemini",
@@ -1939,9 +1919,19 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "working",
-      "response_time_ms": 2933.4,
+      "response_time_ms": 2676.0,
       "error": null,
-      "response_snippet": "Doing great, thanks for asking! Ready to dive into whatever you've got on your mind today\u2014whether that's solving a tricky problem, brainstorming, or just digging into a random topic. \n\nHow are things "
+      "response_snippet": "Doing well and fully operational! Ready to help you tackle whatever is on your mind today\u2014whether you need to organize a project, solve a problem, or just explore a new idea. \n\nHow are you doing, and "
+    },
+    {
+      "provider": "CohereForAI_C4AI_Command",
+      "model": "command-a-03-2025",
+      "needs_auth": false,
+      "browser_required": false,
+      "status": "working",
+      "response_time_ms": 1877.9,
+      "error": null,
+      "response_snippet": "As an AI, I don't have feelings or physical sensations, so I don't experience health or well-being in the way humans do. However, I'm fully operational and ready to assist you with any questions or ta"
     },
     {
       "provider": "Perplexity",
@@ -1949,7 +1939,7 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "working",
-      "response_time_ms": 7578.7,
+      "response_time_ms": 7906.0,
       "error": null,
       "response_snippet": "est."
     },
@@ -1959,7 +1949,7 @@
       "needs_auth": false,
       "browser_required": true,
       "status": "working",
-      "response_time_ms": 7598.2,
+      "response_time_ms": 7668.7,
       "error": null,
       "response_snippet": "est."
     },
@@ -1967,6 +1957,16 @@
       "provider": "GoogleSearch",
       "model": "default",
       "needs_auth": false,
+      "browser_required": true,
+      "status": "timeout",
+      "response_time_ms": 25000.0,
+      "error": "no response within 25s",
+      "response_snippet": null
+    },
+    {
+      "provider": "MicrosoftDesigner",
+      "model": "1024x1024",
+      "needs_auth": true,
       "browser_required": true,
       "status": "timeout",
       "response_time_ms": 25000.0,
