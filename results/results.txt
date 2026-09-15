@@ -1,21 +1,22 @@
 g4f Provider & Model Health Report
-Generated: 2026-09-15T13:22:30.776825+00:00
+Generated: 2026-09-15T19:39:44.875574+00:00
 g4f version: unknown
 Total provider/model pairs tested: 195
 
-WORKING INSTANTLY, NO AUTH, NO BROWSER (2):
+WORKING INSTANTLY, NO AUTH, NO BROWSER (3):
 ------------------------------------------------------------
-CohereForAI_C4AI_Command  command-a-03-2025         1174.7ms
-CohereForAI_C4AI_Command  command-r-plus-08-2024    3100.4ms
+KiloCode                  kilo-auto/free            1927.6ms
+CohereForAI_C4AI_Command  command-a-03-2025         3623.3ms
+CohereForAI_C4AI_Command  command-r-plus-08-2024    10351.9ms
 
 ALL RESULTS:
 ------------------------------------------------------------
 Reka                      default                   status=skipped  auth=True  browser=True  time=Nonems error=marked not working by g4f
+gTTS                      English (Canada)          status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 gTTS                      English (India)           status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 gTTS                      English (Ireland)         status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 SearXNG                   default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 DeepInfra                 zai-org/GLM-5.2           status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-gTTS                      English (Canada)          status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 Local                     default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 EdgeTTS                   default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 OpenaiTemplate            default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
@@ -31,267 +32,268 @@ CreateImagesProvider      default                   status=skipped  auth=False b
 gTTS                      English (United Kingdom)  status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 QwenCode                  qwen3-coder-plus          status=skipped  auth=True  browser=False time=Nonems error=marked not working by g4f
 gTTS                      English (United States)   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-CopilotSession            Copilot                   status=error    auth=True  browser=True  time=60880.1ms error=RuntimeError: Failed to start shared Chrome on port 50629: [3772:3801:0915/130642.995961:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[3772:3772:0915/130643.137827:ERROR:ui/ozone/platf
-HuggingChat               default                   status=error    auth=True  browser=True  time=60880.1ms error=RuntimeError: Failed to start shared Chrome on port 43071: [3810:3810:0915/130659.357451:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[3810:3810:0915/130659.357501:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[3810:3836:0915/130659.358
-OpenaiAccount             gpt-4                     status=error    auth=True  browser=True  time=60879.6ms error=RuntimeError: Failed to start shared Chrome on port 41823: [3848:3848:0915/130719.367174:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[3848:3848:0915/130719.367209:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[3848:3873:0915/130719.367
-AIBadgr                   default                   status=error    auth=True  browser=False time=60875.7ms error=MissingAuthError: Add a "api_key"
-GigaChat                  GigaChat-2-Pro            status=error    auth=True  browser=True  time=60870.0ms error=MissingAuthError: Missing "api_key"
-GigaChat                  GigaChat-2                status=error    auth=True  browser=True  time=20022.0ms error=MissingAuthError: Missing "api_key"
-PerplexityApi             llama-3-sonar-large-32k-chat status=error    auth=True  browser=False time=20022.1ms error=MissingAuthError: Add a "api_key"
-CopilotSession            Think Deeper              status=error    auth=True  browser=True  time=20022.0ms error=RuntimeError: Failed to start shared Chrome on port 57455: [3888:3888:0915/130739.388201:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[3888:3888:0915/130739.388239:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[3888:3913:0915/130739.389
+CopilotSession            Copilot                   status=error    auth=True  browser=True  time=60768.1ms error=RuntimeError: Failed to start shared Chrome on port 45707: [3623:3649:0915/192344.313404:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3623:3623:0915/192344.318594:ERROR:ui/ozone/platf
+HuggingChat               default                   status=error    auth=True  browser=True  time=60768.1ms error=RuntimeError: Failed to start shared Chrome on port 44049: [3660:3660:0915/192404.076155:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[3660:3660:0915/192404.076201:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[3660:3686:0915/192404.076
+OpenaiAccount             gpt-4                     status=error    auth=True  browser=True  time=60767.7ms error=RuntimeError: Failed to start shared Chrome on port 47175: [3706:3706:0915/192424.098966:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[3706:3706:0915/192424.099005:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[3706:3732:0915/192424.099
+AIBadgr                   default                   status=error    auth=True  browser=False time=60764.9ms error=MissingAuthError: Add a "api_key"
+GigaChat                  GigaChat-2-Pro            status=error    auth=True  browser=True  time=60760.5ms error=MissingAuthError: Missing "api_key"
+PerplexityApi             llama-3-sonar-large-32k-chat status=error    auth=True  browser=False time=40038.7ms error=MissingAuthError: Add a "api_key"
+CopilotSession            Think Deeper              status=error    auth=True  browser=True  time=40038.7ms error=RuntimeError: Failed to start shared Chrome on port 38135: [3749:3749:0915/192444.114438:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[3749:3749:0915/192444.114471:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[3749:3774:0915/192444.115
+OpenaiAccount             gpt-4.1                   status=error    auth=True  browser=True  time=40038.7ms error=RuntimeError: Failed to start shared Chrome on port 43393: [3792:3792:0915/192504.134831:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[3792:3792:0915/192504.134874:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[3792:3817:0915/192504.135
 LLM7                      default                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
 CohereForAI_C4AI_Command  command-r-08-2024         status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-OpenaiAccount             gpt-4.1                   status=error    auth=True  browser=True  time=20020.9ms error=RuntimeError: Failed to start shared Chrome on port 59637: [3927:3927:0915/130759.411185:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[3927:3927:0915/130759.411255:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-
-Replicate                 meta/meta-llama-3-70b-instruct status=error    auth=True  browser=False time=20020.9ms error=MissingAuthError: api_key is missing
+Replicate                 meta/meta-llama-3-70b-instruct status=error    auth=True  browser=False time=49.1ms error=MissingAuthError: api_key is missing
+Anthropic                 claude-opus-4-1-20250805  status=error    auth=True  browser=False time=49.1ms error=MissingAuthError: Add a "api_key"
 BlackboxPro               anthropic/claude-sonnet-4.5 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-Anthropic                 claude-opus-4-1-20250805  status=error    auth=True  browser=False time=1.5ms error=MissingAuthError: Add a "api_key"
-Custom                    default                   status=error    auth=False browser=False time=40380.4ms error=ConnectionError: Failed to perform, curl: (7) Failed to connect to localhost:8080 after 1 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-GigaChat                  GigaChat-2-Max            status=error    auth=True  browser=True  time=337.0ms error=MissingAuthError: Missing "api_key"
-PerplexityApi             llama-3-8b-instruct       status=error    auth=True  browser=False time=337.1ms error=MissingAuthError: Add a "api_key"
-BlackboxPro               deepseek/deepseek-chat-v3.1 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-CopilotSession            Smart (GPT-5)             status=error    auth=True  browser=True  time=20531.4ms error=RuntimeError: Failed to start shared Chrome on port 40399: [3972:3972:0915/130819.768192:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[3972:3972:0915/130819.768230:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[3972:3997:0915/130819.768
-HuggingFaceMedia          default                   status=error    auth=True  browser=False time=40552.3ms error=MissingAuthError: Add a "api_key"
-OpenaiChat                auto                      status=error    auth=False browser=True  time=20025.5ms error=RuntimeError: Failed to start shared Chrome on port 36321: [4010:4010:0915/130840.298701:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4010:4010:0915/130840.298738:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-
-Anthropic                 claude-sonnet-4-20250514  status=error    auth=True  browser=False time=1.8ms error=MissingAuthError: Add a "api_key"
+GigaChat                  GigaChat-2-Max            status=error    auth=True  browser=True  time=147.9ms error=MissingAuthError: Missing "api_key"
 HuggingFace               default                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-GigaChat                  GigaChat                  status=error    auth=True  browser=True  time=1.4ms error=MissingAuthError: Missing "api_key"
-Ollama                    default                   status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-KiloCode                  kilo-auto/free            status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-CohereForAI_C4AI_Command  command-r-plus            status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-PerplexityApi             llama-3-70b-instruct      status=error    auth=True  browser=False time=0.6ms error=MissingAuthError: Add a "api_key"
-BlackboxPro               google/gemini-2.5-pro-preview-03-25 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-xAI                       default                   status=error    auth=True  browser=False time=20021.9ms error=MissingAuthError: Add a "api_key"
-CopilotSession            Study                     status=error    auth=True  browser=True  time=40042.0ms error=RuntimeError: Failed to start shared Chrome on port 49291: [4047:4047:0915/130900.336381:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4047:4047:0915/130900.336438:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+PerplexityApi             llama-3-8b-instruct       status=error    auth=True  browser=False time=40138.3ms error=MissingAuthError: Add a "api_key"
+CopilotSession            Smart (GPT-5)             status=error    auth=True  browser=True  time=40138.3ms error=RuntimeError: Failed to start shared Chrome on port 53357: [3833:3833:0915/192524.304476:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[3833:3833:0915/192524.304515:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
 
-OpenaiChat                gpt-5-2                   status=error    auth=False browser=True  time=20021.1ms error=RuntimeError: Failed to start shared Chrome on port 35989: [4155:4155:0915/130920.349773:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4155:4155:0915/130920.349826:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4155:4188:0915/130920.350
-PerplexityApi             llama-3-sonar-large-32k-online status=error    auth=True  browser=False time=20020.8ms error=MissingAuthError: Add a "api_key"
-Anthropic                 claude-opus-4-20250522    status=error    auth=True  browser=False time=1.8ms error=MissingAuthError: Add a "api_key"
-GigaChat                  GigaChat-Pro              status=error    auth=True  browser=True  time=1.2ms error=MissingAuthError: Missing "api_key"
-BlackboxPro               deepseek/deepseek-r1-0528 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+BlackboxPro               deepseek/deepseek-chat-v3.1 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+HuggingFaceMedia          default                   status=error    auth=True  browser=False time=20020.1ms error=MissingAuthError: Add a "api_key"
+OpenaiChat                auto                      status=error    auth=False browser=True  time=20020.1ms error=RuntimeError: Failed to start shared Chrome on port 41987: [3872:3872:0915/192544.319825:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[3872:3872:0915/192544.319872:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[3872:3897:0915/192544.320
+Anthropic                 claude-sonnet-4-20250514  status=error    auth=True  browser=False time=1.0ms error=MissingAuthError: Add a "api_key"
+GigaChat                  GigaChat                  status=error    auth=True  browser=True  time=0.9ms error=MissingAuthError: Missing "api_key"
+PerplexityApi             llama-3-70b-instruct      status=error    auth=True  browser=False time=0.7ms error=MissingAuthError: Add a "api_key"
+Ollama                    default                   status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+BlackboxPro               google/gemini-2.5-pro-preview-03-25 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+CohereForAI_C4AI_Command  command-r-plus            status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+xAI                       default                   status=error    auth=True  browser=False time=20019.4ms error=MissingAuthError: Add a "api_key"
+CopilotSession            Study                     status=error    auth=True  browser=True  time=40038.2ms error=RuntimeError: Failed to start shared Chrome on port 56009: [3912:3912:0915/192604.348030:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[3912:3912:0915/192604.348078:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[3912:3937:0915/192604.350
+OpenaiChat                gpt-5-2                   status=error    auth=False browser=True  time=20019.7ms error=RuntimeError: Failed to start shared Chrome on port 51657: [3947:3947:0915/192624.362844:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[3947:3947:0915/192624.362880:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[3947:3972:0915/192624.363
+Anthropic                 claude-opus-4-20250522    status=error    auth=True  browser=False time=0.9ms error=MissingAuthError: Add a "api_key"
 CohereForAI_C4AI_Command  command-r                 status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
 OpenAIFM                  friendly                  status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+GigaChat                  GigaChat-Pro              status=error    auth=True  browser=True  time=0.7ms error=MissingAuthError: Missing "api_key"
+BlackboxPro               deepseek/deepseek-r1-0528 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+LMArena                   default                   status=error    auth=False browser=True  time=41804.7ms error=RuntimeError: Failed to start shared Chrome on port 60087: [3988:3988:0915/192646.147075:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[3988:3988:0915/192646.147118:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[3988:4013:0915/192646.147
+OpenaiChat                gpt-5-1                   status=error    auth=False browser=True  time=41804.5ms error=RuntimeError: Failed to start shared Chrome on port 37865: [4027:4027:0915/192706.169376:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4027:4027:0915/192706.169419:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4027:4052:0915/192706.170
 HuggingSpace              command-a-03-2025         status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-LMArena                   default                   status=error    auth=False browser=True  time=41231.1ms error=RuntimeError: Failed to start shared Chrome on port 48677: [4218:4218:0915/130941.557776:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4218:4218:0915/130941.557816:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4218:4244:0915/130941.559
-OpenaiChat                gpt-5-1                   status=error    auth=False browser=True  time=41231.1ms error=RuntimeError: Failed to start shared Chrome on port 54839: [4255:4255:0915/131001.583565:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4255:4255:0915/131001.583609:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4255:4284:0915/131001.584
-Anthropic                 claude-3-7-sonnet-20250219 status=error    auth=True  browser=False time=20020.1ms error=MissingAuthError: Add a "api_key"
-Copilot                   Copilot                   status=error    auth=True  browser=True  time=20020.2ms error=RuntimeError: Failed to start shared Chrome on port 35359: [4295:4295:0915/131021.603854:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4295:4295:0915/131021.603896:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-
+StabilityAI_SD35Large     sd-3.5-large              status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Anthropic                 claude-3-7-sonnet-20250219 status=error    auth=True  browser=False time=1.6ms error=MissingAuthError: Add a "api_key"
 CohereForAI_C4AI_Command  command-r7b-12-2024       status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
 OpenAIFM                  patient_teacher           status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-StabilityAI_SD35Large     sd-3.5-large              status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
 PhindAi                   deepseek-v3               status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-GigaChat                  GigaChat-Max              status=error    auth=True  browser=True  time=20028.3ms error=MissingAuthError: Missing "api_key"
-OpenaiChat                gpt-5                     status=error    auth=False browser=True  time=20031.5ms error=RuntimeError: Failed to start shared Chrome on port 44157: [4333:4333:0915/131041.627383:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4333:4333:0915/131041.627423:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4333:4358:0915/131041.628
+Copilot                   Copilot                   status=error    auth=True  browser=True  time=20021.9ms error=RuntimeError: Failed to start shared Chrome on port 54367: [4065:4065:0915/192726.194737:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4065:4065:0915/192726.194779:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4065:4091:0915/192726.195
+GigaChat                  GigaChat-Max              status=error    auth=True  browser=True  time=20021.9ms error=MissingAuthError: Missing "api_key"
 CachedSearch              default                   status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-DeepSeek                  deepseek-v3               status=error    auth=True  browser=True  time=20033.5ms error=MissingAuthError: DeepSeekAuth: Authorization token required. Please ensure HAR file contains authorization header.
-ThebApi                   theb-ai                   status=error    auth=True  browser=False time=20021.7ms error=MissingAuthError: Add a "api_key"
-Anthropic                 claude-3-5-sonnet-20241022 status=error    auth=True  browser=False time=20025.0ms error=MissingAuthError: Add a "api_key"
-Copilot                   Think Deeper              status=error    auth=True  browser=True  time=20025.1ms error=RuntimeError: Failed to start shared Chrome on port 38357: [4370:4370:0915/131101.657543:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4370:4370:0915/131101.657588:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4370:4396:0915/131101.658
-TeachAnything             gemma                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-GithubCopilot             gpt-4.1                   status=error    auth=True  browser=False time=5.2ms error=MissingAuthError: GitHub Copilot OAuth not configured. Please run 'g4f auth github-copilot' to authenticate.
-Pi                        pi                        status=error    auth=False browser=True  time=20020.3ms error=RuntimeError: Failed to start shared Chrome on port 55773: [4408:4408:0915/131121.681870:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4408:4408:0915/131121.681913:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4408:4433:0915/131121.682
-Cerebras                  llama3.1-70b              status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-DeepSeek                  deepseek-r1               status=error    auth=True  browser=True  time=0.7ms error=MissingAuthError: DeepSeekAuth: Authorization token required. Please ensure HAR file contains authorization header.
-PhindAi                   deepseek                  status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-MarkItDown                default                   status=error    auth=False browser=False time=0.7ms error=ValueError: MarkItDown requires media to be provided.
+OpenaiChat                gpt-5                     status=error    auth=False browser=True  time=20027.5ms error=RuntimeError: Failed to start shared Chrome on port 51111: [4106:4106:0915/192746.219857:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4106:4106:0915/192746.219904:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4106:4131:0915/192746.221
+ThebApi                   theb-ai                   status=error    auth=True  browser=False time=20027.5ms error=MissingAuthError: Add a "api_key"
+DeepSeek                  deepseek-v3               status=error    auth=True  browser=True  time=20029.1ms error=MissingAuthError: DeepSeekAuth: Authorization token required. Please ensure HAR file contains authorization header.
+Anthropic                 claude-3-5-sonnet-20241022 status=error    auth=True  browser=False time=20024.3ms error=MissingAuthError: Add a "api_key"
+Copilot                   Think Deeper              status=error    auth=True  browser=True  time=20020.9ms error=RuntimeError: Failed to start shared Chrome on port 38493: [4143:4143:0915/192806.242721:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4143:4143:0915/192806.242760:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4143:4168:0915/192806.243
+GithubCopilot             gpt-4.1                   status=error    auth=True  browser=False time=20020.9ms error=MissingAuthError: GitHub Copilot OAuth not configured. Please run 'g4f auth github-copilot' to authenticate.
 OpenAIFM                  noir_detective            status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-OpenaiChat                gpt-4                     status=error    auth=False browser=True  time=40045.4ms error=RuntimeError: Failed to start shared Chrome on port 54211: [4443:4443:0915/131141.702037:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4443:4443:0915/131141.702091:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4443:4469:0915/131141.702
-Together                  openai/gpt-oss-120b       status=error    auth=True  browser=False time=40045.6ms error=MissingAuthError: Add a "api_key"
-Anthropic                 claude-3-5-haiku-20241022 status=error    auth=True  browser=False time=20022.8ms error=MissingAuthError: Add a "api_key"
-Copilot                   Smart (GPT-5)             status=error    auth=True  browser=True  time=20022.8ms error=RuntimeError: Failed to start shared Chrome on port 51053: [4479:4479:0915/131201.737487:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4479:4479:0915/131201.737532:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+TeachAnything             gemma                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+PhindAi                   deepseek                  status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Pi                        pi                        status=error    auth=False browser=True  time=20020.7ms error=RuntimeError: Failed to start shared Chrome on port 52801: [4180:4180:0915/192826.265619:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4180:4180:0915/192826.265658:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4180:4205:0915/192826.266
+Cerebras                  llama3.1-70b              status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+DeepSeek                  deepseek-r1               status=error    auth=True  browser=True  time=20020.0ms error=MissingAuthError: DeepSeekAuth: Authorization token required. Please ensure HAR file contains authorization header.
+MarkItDown                default                   status=error    auth=False browser=False time=20020.0ms error=ValueError: MarkItDown requires media to be provided.
+OpenaiChat                gpt-4                     status=error    auth=False browser=True  time=20019.8ms error=RuntimeError: Failed to start shared Chrome on port 45959: [4217:4217:0915/192846.285698:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4217:4217:0915/192846.285745:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4217:4242:0915/192846.288
+Together                  openai/gpt-oss-120b       status=error    auth=True  browser=False time=20019.8ms error=MissingAuthError: Add a "api_key"
+Anthropic                 claude-3-5-haiku-20241022 status=error    auth=True  browser=False time=40039.5ms error=MissingAuthError: Add a "api_key"
+Copilot                   Smart (GPT-5)             status=error    auth=True  browser=True  time=23290.8ms error=RuntimeError: Failed to start shared Chrome on port 43347: [4255:4255:0915/192906.304207:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4255:4255:0915/192906.304249:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
 
-GithubCopilotAPI          default                   status=error    auth=True  browser=False time=20023.0ms error=MissingAuthError: Add a "api_key"
-Cerebras                  llama3.1-8b               status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+GithubCopilotAPI          default                   status=error    auth=True  browser=False time=23290.8ms error=MissingAuthError: Add a "api_key"
 OpenAIFM                  cowboy                    status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-OpenaiChat                gpt-4.1                   status=error    auth=False browser=True  time=20023.4ms error=RuntimeError: Failed to start shared Chrome on port 48035: [4518:4518:0915/131224.286285:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4518:4518:0915/131224.286343:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-
-Antigravity               gemini-3-flash            status=error    auth=True  browser=False time=20022.6ms error=RuntimeError: ANTIGRAVITY_SERVICE_ACCOUNT environment variable not set. Please set it or create credentials at /home/runner/.antigravity/oauth_creds.json
-Copilot                   Study                     status=error    auth=True  browser=True  time=20023.2ms error=RuntimeError: Failed to start shared Chrome on port 50491: [4555:4555:0915/131244.310115:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4555:4555:0915/131244.310181:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4555:4580:0915/131244.311
-GoogleAiMode              ai-mode                   status=error    auth=False browser=False time=20022.0ms error=RuntimeError: Failed to start shared Chrome on port 51781: [4589:4614:0915/131304.327716:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[4589:4589:0915/131304.329788:ERROR:ui/ozone/platf
-MetaAI                    meta-ai                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+OpenaiChat                gpt-4.1                   status=error    auth=False browser=True  time=20021.5ms error=RuntimeError: Failed to start shared Chrome on port 52631: [4298:4298:0915/192929.597467:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4298:4298:0915/192929.597515:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4298:4323:0915/192929.598
+Cerebras                  llama3.1-8b               status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+Antigravity               gemini-3-flash            status=error    auth=True  browser=False time=20021.6ms error=RuntimeError: ANTIGRAVITY_SERVICE_ACCOUNT environment variable not set. Please set it or create credentials at /home/runner/.antigravity/oauth_creds.json
 OpenAIFM                  calm                      status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Copilot                   Study                     status=error    auth=True  browser=True  time=20021.7ms error=RuntimeError: Failed to start shared Chrome on port 54309: [4333:4333:0915/192949.613616:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4333:4333:0915/192949.613657:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4333:4360:0915/192949.614
+GoogleAiMode              ai-mode                   status=error    auth=False browser=False time=20020.5ms error=RuntimeError: Failed to start shared Chrome on port 36539: [4372:4372:0915/193009.640243:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4372:4372:0915/193009.640288:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4372:4398:0915/193009.641
+MetaAI                    meta-ai                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+PollinationsAudio         elevenlabs                status=error    auth=False browser=False time=1.0ms error=NameError: name 'AuthManager' is not defined
+Pollinations              default                   status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
 Cerebras                  llama-3.3-70b             status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
 AnyProvider               default                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-Pollinations              default                   status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-PollinationsAudio         elevenlabs                status=error    auth=False browser=False time=4.4ms error=NameError: name 'AuthManager' is not defined
+ElevenLabs                eleven_v3                 status=error    auth=True  browser=True  time=20023.6ms error=RuntimeError: hCaptcha accessibility cookie required: log in at https://dashboard.hcaptcha.com/signup?type=accessibility in your browser, or pass hc_accessibility="...".
+CopilotAccount            Copilot                   status=error    auth=True  browser=True  time=20021.8ms error=RuntimeError: Failed to start shared Chrome on port 60115: [4408:4408:0915/193029.664250:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4408:4408:0915/193029.664301:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4408:4434:0915/193029.665
 WhiteRabbitNeo            default                   status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-ElevenLabs                eleven_v3                 status=error    auth=True  browser=True  time=7.8ms error=RuntimeError: hCaptcha accessibility cookie required: log in at https://dashboard.hcaptcha.com/signup?type=accessibility in your browser, or pass hc_accessibility="...".
-CopilotAccount            Copilot                   status=error    auth=True  browser=True  time=41156.9ms error=RuntimeError: Failed to start shared Chrome on port 57867: [4625:4625:0915/131324.357433:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4625:4625:0915/131324.357480:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4625:4650:0915/131324.358
-GoogleSearch              search                    status=error    auth=False browser=False time=21135.0ms error=RuntimeError: Failed to start shared Chrome on port 52161: [4661:4661:0915/131345.496249:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4661:4661:0915/131345.496298:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4661:4686:0915/131345.497
-MetaAIAccount             meta-ai                   status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-AnyProvider               gpt-4                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-Cerebras                  deepseek-r1-distill-llama-70b status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-You                       default                   status=error    auth=False browser=False time=41277.6ms error=InvalidURL: Failed to perform, curl: (3) URL rejected: No host part in the URL. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+GoogleSearch              search                    status=error    auth=False browser=False time=20304.2ms error=RuntimeError: Failed to start shared Chrome on port 57845: [4451:4451:0915/193051.168009:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4451:4451:0915/193051.168055:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+
 OpenAIFM                  scientific_style          status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+You                       default                   status=error    auth=False browser=False time=41810.6ms error=InvalidURL: Failed to perform, curl: (3) URL rejected: No host part in the URL. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+MetaAIAccount             meta-ai                   status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+Cerebras                  deepseek-r1-distill-llama-70b status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+AnyProvider               gpt-4                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Claude                    default                   status=error    auth=False browser=True  time=21885.5ms error=MissingAuthError: Claude cookie not found. Please set the 'CLAUDE_COOKIE' environment variable.
+MicrosoftDesigner         dall-e-3                  status=error    auth=True  browser=True  time=20029.1ms error=RuntimeError: Failed to start shared Chrome on port 41759: [4489:4489:0915/193113.332930:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4489:4489:0915/193113.332974:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4489:4514:0915/193113.334
+PerplexityApi             llama-3-sonar-large-32k-online status=error    auth=True  browser=False time=1.4ms error=MissingAuthError: Add a "api_key"
+OpenCode                  big-pickle                status=error    auth=False browser=False time=22172.5ms error=ConnectionError: Failed to perform, curl: (56) Connection closed abruptly. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
 Airforce                  unmoderated-gpt           status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-MicrosoftDesigner         dall-e-3                  status=error    auth=True  browser=True  time=21211.2ms error=RuntimeError: Failed to start shared Chrome on port 45039: [4703:4703:0915/131406.825547:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4703:4703:0915/131406.825588:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+CopilotAccount            Think Deeper              status=error    auth=True  browser=True  time=40042.3ms error=RuntimeError: Failed to start shared Chrome on port 37089: [4524:4524:0915/193133.363394:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4524:4524:0915/193133.363439:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4524:4550:0915/193133.364
+Grok                      grok-4                    status=error    auth=True  browser=True  time=20021.3ms error=RuntimeError: Failed to start shared Chrome on port 57101: [4559:4559:0915/193153.381408:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4559:4559:0915/193153.381458:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
 
-Claude                    default                   status=error    auth=False browser=True  time=21213.0ms error=MissingAuthError: Claude cookie not found. Please set the 'CLAUDE_COOKIE' environment variable.
-BingCreateImages          dall-e-3                  status=error    auth=True  browser=True  time=20027.5ms error=MissingAuthError: Missing "_U" cookie
-CopilotAccount            Think Deeper              status=error    auth=True  browser=True  time=40045.6ms error=RuntimeError: Failed to start shared Chrome on port 51171: [4744:4744:0915/131426.846597:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4744:4744:0915/131426.846642:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4744:4769:0915/131426.847
-OpenCode                  big-pickle                status=error    auth=False browser=False time=61379.3ms error=SSLError: Failed to perform, curl: (35) BoringSSL SSL_connect: Connection closed abruptly (SSL_ERROR_SYSCALL; error queue empty) in connection to opencode.ai:443. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-Grok                      grok-4                    status=error    auth=True  browser=True  time=20026.0ms error=RuntimeError: Failed to start shared Chrome on port 36393: [4781:4781:0915/131446.876177:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4781:4781:0915/131446.876239:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-
-OpenRouter                openrouter/auto           status=error    auth=True  browser=False time=20023.2ms error=MissingAuthError: Add a "api_key"
-Puter                     gpt-5.1                   status=error    auth=True  browser=False time=40043.8ms error=MissingAuthError: API key is required for Puter.js API
-OperaAria                 aria                      status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-GLM                       GLM-4.7                   status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-Cloudflare                deepseek-coder-6.7b       status=error    auth=False browser=True  time=20023.2ms error=RuntimeError: Failed to start shared Chrome on port 38771: [4856:4856:0915/131526.921888:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4856:4856:0915/131526.921963:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4856:4881:0915/131526.922
+OpenRouter                openrouter/auto           status=error    auth=True  browser=False time=20021.3ms error=MissingAuthError: Add a "api_key"
+BingCreateImages          dall-e-3                  status=error    auth=True  browser=True  time=40044.5ms error=MissingAuthError: Missing "_U" cookie
+Puter                     gpt-5.1                   status=error    auth=True  browser=False time=40041.8ms error=MissingAuthError: API key is required for Puter.js API
 AnyProvider               gpt-4o                    status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+OperaAria                 aria                      status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Cloudflare                deepseek-coder-6.7b       status=error    auth=False browser=True  time=40042.4ms error=RuntimeError: Failed to start shared Chrome on port 44605: [4631:4631:0915/193233.419530:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4631:4631:0915/193233.419593:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4631:4656:0915/193233.420
+GLM                       GLM-4.7                   status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
 PollinationsImage         auto                      status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-MicrosoftDesigner         1024x1024                 status=error    auth=True  browser=True  time=40046.4ms error=RuntimeError: Failed to start shared Chrome on port 57209: [4893:4893:0915/131546.945397:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4893:4893:0915/131546.945450:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4893:4919:0915/131546.948
-CopilotAccount            Smart (GPT-5)             status=error    auth=True  browser=True  time=40043.4ms error=RuntimeError: Failed to start shared Chrome on port 46701: [4926:4926:0915/131606.965318:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4926:4926:0915/131606.965381:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4926:4953:0915/131606.965
-Grok                      grok-4-heavy              status=error    auth=True  browser=True  time=40044.5ms error=RuntimeError: Failed to start shared Chrome on port 38505: [4960:4960:0915/131626.989295:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[4960:4960:0915/131626.989347:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[4960:4986:0915/131626.990
-AnyProvider               gpt-4o-mini               status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-Cloudflare                deepseek-coder-6.7b-base  status=error    auth=False browser=True  time=20020.9ms error=RuntimeError: Failed to start shared Chrome on port 33675: [5002:5002:0915/131647.011701:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5002:5002:0915/131647.011737:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5002:5028:0915/131647.012
-OperaAria                 aria-legacy               status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-BraveSearch               brave                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+MicrosoftDesigner         1024x1024                 status=error    auth=True  browser=True  time=60065.8ms error=RuntimeError: Failed to start shared Chrome on port 34963: [4670:4670:0915/193253.440501:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4670:4670:0915/193253.440590:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4670:4696:0915/193253.441
 Gemini                    gemini-3.6-flash          status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-MicrosoftDesigner         1024x1792                 status=error    auth=True  browser=True  time=20024.9ms error=RuntimeError: Failed to start shared Chrome on port 46867: [5039:5039:0915/131707.030846:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5039:5039:0915/131707.030906:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5039:5064:0915/131707.031
-CopilotAccount            Study                     status=error    auth=True  browser=True  time=40041.9ms error=RuntimeError: Failed to start shared Chrome on port 43111: [5077:5077:0915/131727.059763:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5077:5077:0915/131727.059812:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5077:5102:0915/131727.062
-Grok                      grok-4-reasoning          status=error    auth=True  browser=True  time=40041.6ms error=RuntimeError: Failed to start shared Chrome on port 59487: [5111:5111:0915/131747.072062:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5111:5111:0915/131747.072106:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+CopilotAccount            Smart (GPT-5)             status=error    auth=True  browser=True  time=40044.7ms error=RuntimeError: Failed to start shared Chrome on port 37151: [4705:4705:0915/193313.469455:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4705:4705:0915/193313.469509:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4705:4731:0915/193313.470
+Grok                      grok-4-heavy              status=error    auth=True  browser=True  time=40044.7ms error=RuntimeError: Failed to start shared Chrome on port 48189: [4740:4740:0915/193333.491619:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4740:4740:0915/193333.491667:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4740:4765:0915/193333.493
+AnyProvider               gpt-4o-mini               status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Cloudflare                deepseek-coder-6.7b-base  status=error    auth=False browser=True  time=40040.0ms error=RuntimeError: Failed to start shared Chrome on port 57755: [4780:4780:0915/193353.517500:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4780:4780:0915/193353.517541:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4780:4805:0915/193353.518
+MicrosoftDesigner         1024x1792                 status=error    auth=True  browser=True  time=20020.3ms error=RuntimeError: Failed to start shared Chrome on port 53559: [4816:4816:0915/193413.528814:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4816:4816:0915/193413.528857:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
 
+BraveSearch               brave                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+OperaAria                 aria-legacy               status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+CopilotAccount            Study                     status=error    auth=True  browser=True  time=40039.8ms error=RuntimeError: Failed to start shared Chrome on port 43431: [4855:4855:0915/193433.554269:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4855:4855:0915/193433.554309:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4855:4880:0915/193433.555
+Qwen                      qwen3.7-plus              status=error    auth=False browser=True  time=80084.3ms error=Timeout: Failed to perform, curl: (28) Resolving timed out after 40039 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+OpenRouterFree            default                   status=error    auth=False browser=False time=80084.6ms error=Timeout: Failed to perform, curl: (28) Resolving timed out after 40040 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
 AnyProvider               gpt-4o-mini-tts           status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-OpenRouterFree            default                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-Qwen                      qwen3.7-plus              status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-Perplexity                auto                      status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-Cloudflare                deepseek-distill-qwen-32b status=error    auth=False browser=True  time=20023.0ms error=RuntimeError: Failed to start shared Chrome on port 36985: [5151:5151:0915/131807.102703:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5151:5151:0915/131807.102744:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5151:5176:0915/131807.104
 Gemini                    gemini-3.5-flash-lite     status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+Grok                      grok-4-reasoning          status=error    auth=True  browser=True  time=20020.1ms error=RuntimeError: Failed to start shared Chrome on port 42451: [4891:4891:0915/193453.573972:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4891:4891:0915/193453.574007:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4891:4916:0915/193453.575
+Cloudflare                deepseek-distill-qwen-32b status=error    auth=False browser=True  time=40045.7ms error=RuntimeError: Failed to start shared Chrome on port 47065: [4928:4928:0915/193513.595541:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4928:4928:0915/193513.595610:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4928:4953:0915/193513.596
+MicrosoftDesigner         1792x1024                 status=error    auth=True  browser=True  time=20023.3ms error=RuntimeError: Failed to start shared Chrome on port 34665: [4968:4968:0915/193533.620980:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[4968:4968:0915/193533.621024:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[4968:4993:0915/193533.622
+Perplexity                auto                      status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
 BraveSearch               brave-deep-research       status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-MicrosoftDesigner         1792x1024                 status=error    auth=True  browser=True  time=20024.3ms error=RuntimeError: Failed to start shared Chrome on port 55969: [5188:5188:0915/131827.124340:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5188:5188:0915/131827.124382:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5188:5214:0915/131827.125
-Grok                      grok-3                    status=error    auth=True  browser=True  time=20023.9ms error=RuntimeError: Failed to start shared Chrome on port 45815: [5229:5229:0915/131847.152604:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5229:5229:0915/131847.152644:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5229:5255:0915/131847.154
 Gemini                    gemini-3.1-pro            status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-AnyProvider               o1                        status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Grok                      grok-3                    status=error    auth=True  browser=True  time=20020.7ms error=RuntimeError: Failed to start shared Chrome on port 33349: [5009:5009:0915/193553.643078:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5009:5009:0915/193553.643120:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5009:5034:0915/193553.643
 OrcaRouter                default                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
 Qwen                      qwen3.7-max               status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-OpenaiAPI                 default                   status=error    auth=True  browser=False time=20020.8ms error=MissingAuthError: Add a "api_key"
-Cloudflare                deepseek-math-7b          status=error    auth=False browser=True  time=20020.8ms error=RuntimeError: Failed to start shared Chrome on port 35849: [5268:5268:0915/131907.177166:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5268:5268:0915/131907.177213:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5268:5294:0915/131907.178
-MiniMax                   MiniMax-M3                status=error    auth=True  browser=False time=20020.8ms error=MissingAuthError: Add a "api_key"
-Perplexity                turbo                     status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-Grok                      grok-3-reasoning          status=error    auth=True  browser=True  time=20022.5ms error=RuntimeError: Failed to start shared Chrome on port 34987: [5311:5311:0915/131927.198858:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5311:5311:0915/131927.198904:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5311:5336:0915/131927.200
+AnyProvider               o1                        status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+OpenaiAPI                 default                   status=error    auth=True  browser=False time=20020.4ms error=MissingAuthError: Add a "api_key"
+Cloudflare                deepseek-math-7b          status=error    auth=False browser=True  time=20020.8ms error=RuntimeError: Failed to start shared Chrome on port 32909: [5044:5044:0915/193613.665946:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5044:5044:0915/193613.665992:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5044:5069:0915/193613.666
+MiniMax                   MiniMax-M3                status=error    auth=True  browser=False time=20020.9ms error=MissingAuthError: Add a "api_key"
 CopilotApp                smart                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Perplexity                turbo                     status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
 BlackForestLabs_Flux1Dev  flux-dev                  status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-OpenaiAccount             auto                      status=error    auth=True  browser=True  time=40042.6ms error=RuntimeError: Failed to start shared Chrome on port 35357: [5348:5348:0915/131947.220168:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5348:5348:0915/131947.220227:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5348:5375:0915/131947.221
-Gemini                    gemini-3.7-flash          status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-Cloudflare                discolm-german-7b-v1      status=error    auth=False browser=True  time=20022.9ms error=RuntimeError: Failed to start shared Chrome on port 34553: [5390:5390:0915/132007.235007:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5390:5390:0915/132007.235052:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-
-Qwen                      qwen3.6-plus              status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-MiniMax                   MiniMax-M2.7              status=error    auth=True  browser=False time=2.0ms error=MissingAuthError: Add a "api_key"
+Grok                      grok-3-reasoning          status=error    auth=True  browser=True  time=40040.8ms error=RuntimeError: Failed to start shared Chrome on port 60025: [5087:5087:0915/193633.689004:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5087:5087:0915/193633.689042:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5087:5112:0915/193633.689
+OpenaiAccount             auto                      status=error    auth=True  browser=True  time=40041.2ms error=RuntimeError: Failed to start shared Chrome on port 54809: [5122:5122:0915/193653.708521:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5122:5122:0915/193653.708580:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5122:5147:0915/193653.709
+Cloudflare                discolm-german-7b-v1      status=error    auth=False browser=True  time=20020.6ms error=RuntimeError: Failed to start shared Chrome on port 48359: [5160:5160:0915/193713.725075:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5160:5160:0915/193713.725108:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5160:5185:0915/193713.725
 CopilotApp                reasoning                 status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Qwen                      qwen3.6-plus              status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+BlackForestLabs_Flux1Dev  flux                      status=error    auth=False browser=False time=60065.3ms error=Timeout: Failed to perform, curl: (28) Resolving timed out after 40042 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+Gemini                    gemini-3.7-flash          status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
 Perplexity                gpt41                     status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-BlackForestLabs_Flux1Dev  flux                      status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
 Qwen                      qwen3.6-max-preview       status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-Grok                      grok-3-mini               status=error    auth=True  browser=True  time=40044.0ms error=RuntimeError: Failed to start shared Chrome on port 50265: [5428:5428:0915/132027.428247:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5428:5428:0915/132027.428293:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5428:5453:0915/132027.429
-OpenaiAccount             gpt-5-2                   status=error    auth=True  browser=True  time=40044.0ms error=RuntimeError: Failed to start shared Chrome on port 39853: [5464:5464:0915/132047.449568:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5464:5464:0915/132047.449618:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-
-BlackForestLabs_Flux1KontextDev flux-kontext-dev          status=error    auth=False browser=False time=40045.3ms error=ValueError: No media files provided for image generation.
+MiniMax                   MiniMax-M2.7              status=error    auth=True  browser=False time=1.3ms error=MissingAuthError: Add a "api_key"
+Grok                      grok-3-mini               status=error    auth=True  browser=True  time=40039.2ms error=RuntimeError: Failed to start shared Chrome on port 37105: [5200:5200:0915/193733.753248:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5200:5200:0915/193733.753286:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5200:5225:0915/193733.753
+OpenaiAccount             gpt-5-2                   status=error    auth=True  browser=True  time=40039.3ms error=RuntimeError: Failed to start shared Chrome on port 42897: [5236:5236:0915/193753.772970:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5236:5236:0915/193753.773011:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5236:5261:0915/193753.773
+BlackForestLabs_Flux1KontextDev flux-kontext-dev          status=error    auth=False browser=False time=40040.4ms error=ValueError: No media files provided for image generation.
 ProviderCircuitBreaker    default                   status=error    auth=False browser=False time=0.0ms error=AttributeError: type object 'ProviderCircuitBreaker' has no attribute 'working'
-Cloudflare                falcon-7b                 status=error    auth=False browser=True  time=20021.8ms error=RuntimeError: Failed to start shared Chrome on port 44937: [5501:5501:0915/132107.474328:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5501:5501:0915/132107.474379:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5501:5526:0915/132107.475
-Yqcloud                   gpt-4                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-MiniMax                   MiniMax-M2.7-highspeed    status=error    auth=True  browser=False time=20021.8ms error=MissingAuthError: Add a "api_key"
-Perplexity                gpt5                      status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+Cloudflare                falcon-7b                 status=error    auth=False browser=True  time=20020.1ms error=RuntimeError: Failed to start shared Chrome on port 37331: [5273:5273:0915/193813.791962:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5273:5273:0915/193813.792001:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5273:5298:0915/193813.792
 Gemini                    gemini-3.8-flash          status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+Yqcloud                   gpt-4                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+MiniMax                   MiniMax-M2.7-highspeed    status=error    auth=True  browser=False time=20020.1ms error=MissingAuthError: Add a "api_key"
+Perplexity                gpt5                      status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
 CopilotApp                chat                      status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-OpenaiAccount             gpt-5-1                   status=error    auth=True  browser=True  time=20023.9ms error=RuntimeError: Failed to start shared Chrome on port 41471: [5539:5539:0915/132127.498788:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5539:5539:0915/132127.498840:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5539:5564:0915/132127.499
-Cohere                    command-r-plus            status=error    auth=True  browser=False time=0.6ms error=MissingAuthError: Add a "api_key"
-Qwen                      qwen3.6-27b               status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+GigaChat                  GigaChat-2                status=error    auth=True  browser=True  time=1.1ms error=MissingAuthError: Missing "api_key"
+OpenaiAccount             gpt-5-1                   status=error    auth=True  browser=True  time=20024.1ms error=RuntimeError: Failed to start shared Chrome on port 48769: [5312:5312:0915/193833.814840:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5312:5312:0915/193833.814886:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5312:5338:0915/193833.816
+Custom                    default                   status=error    auth=False browser=False time=20028.8ms error=ConnectionError: Failed to perform, curl: (7) Failed to connect to localhost:8080 after 0 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
 Gemini                    gemini-3.8-pro            status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-GeminiCLI                 gemini-3-pro-preview      status=error    auth=True  browser=False time=1.0ms error=RuntimeError: GCP_SERVICE_ACCOUNT environment variable not set.
-CopilotApp                study                     status=error    auth=False browser=False time=20177.0ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=b93120e5-b14a-4501-b956-1635699662d4'
-BlackboxPro               openai/gpt-5              status=error    auth=True  browser=True  time=20200.9ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
-HailuoAI                  minimax                   status=error    auth=True  browser=True  time=20026.3ms error=RuntimeError: Failed to start shared Chrome on port 54303: [5579:5579:0915/132147.697359:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5579:5579:0915/132147.697403:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-
-OpenaiAccount             gpt-5                     status=error    auth=True  browser=True  time=20025.3ms error=RuntimeError: Failed to start shared Chrome on port 47133: [5613:5613:0915/132207.727739:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
-[5613:5613:0915/132207.727783:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
-[5613:5638:0915/132207.728
-Nvidia                    default                   status=error    auth=False browser=False time=40227.8ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-Perplexity                o3                        status=working  auth=False browser=True  time=40227.2ms
+Qwen                      qwen3.6-27b               status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+Cohere                    command-r-plus            status=error    auth=True  browser=False time=0.4ms error=MissingAuthError: Add a "api_key"
+GeminiCLI                 gemini-3-pro-preview      status=error    auth=True  browser=False time=0.7ms error=RuntimeError: GCP_SERVICE_ACCOUNT environment variable not set.
+BlackboxPro               x-ai/grok-4               status=error    auth=True  browser=True  time=179.9ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
+CopilotApp                study                     status=error    auth=False browser=False time=20291.1ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=7359f4ae-00c2-43b8-bbb2-90d083c3cb93'
+HailuoAI                  minimax                   status=error    auth=True  browser=True  time=20021.2ms error=RuntimeError: Failed to start shared Chrome on port 58897: [5352:5352:0915/193854.104722:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5352:5352:0915/193854.104762:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5352:5377:0915/193854.105
+OpenaiAccount             gpt-5                     status=error    auth=True  browser=True  time=20023.7ms error=RuntimeError: Failed to start shared Chrome on port 54537: [5449:5449:0915/193914.132024:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[5449:5449:0915/193914.132067:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[5449:5475:0915/193914.132
+BlackboxPro               openai/gpt-5              status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+Nvidia                    default                   status=error    auth=False browser=False time=40312.1ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+Perplexity                o3                        status=working  auth=False browser=True  time=40311.6ms
 Groq                      default                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
 Perplexity                gpt5_thinking             status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-BlackboxPro               x-ai/grok-4               status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
 CopilotApp                search                    status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-PerplexityApi             llama-3-sonar-small-32k-chat status=error    auth=True  browser=False time=2.3ms error=MissingAuthError: Add a "api_key"
 Qwen                      qwen-latest-series-invite-beta-v24 status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-G4FSpace                  auto                      status=error    auth=False browser=False time=102.2ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-GeminiPro                 default                   status=error    auth=False browser=False time=330.8ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-RelayRouter               default                   status=error    auth=False browser=False time=846.5ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-CohereForAI_C4AI_Command  command-a-03-2025         status=working  auth=False browser=False time=1174.7ms
-CohereForAI_C4AI_Command  command-r-plus-08-2024    status=working  auth=False browser=False time=3100.4ms
+PerplexityApi             llama-3-sonar-small-32k-chat status=error    auth=True  browser=False time=1.1ms error=MissingAuthError: Add a "api_key"
+G4FSpace                  auto                      status=error    auth=False browser=False time=503.6ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+GeminiPro                 default                   status=error    auth=False browser=False time=840.2ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+RelayRouter               default                   status=error    auth=False browser=False time=628.4ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+KiloCode                  kilo-auto/free            status=working  auth=False browser=False time=1927.6ms
+CohereForAI_C4AI_Command  command-a-03-2025         status=working  auth=False browser=False time=3623.3ms
+CohereForAI_C4AI_Command  command-r-plus-08-2024    status=working  auth=False browser=False time=10351.9ms
