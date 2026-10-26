@@ -1,192 +1,194 @@
 g4f Provider & Model Health Report
-Generated: 2026-10-26T03:32:48.431287+00:00
+Generated: 2026-10-26T14:54:06.347422+00:00
 g4f version: 8.8.6
 Total provider/model pairs tested: 162
 
-WORKING INSTANTLY, NO AUTH, NO BROWSER (13):
+WORKING INSTANTLY, NO AUTH, NO BROWSER (11):
 ------------------------------------------------------------
-KiloCode                  kilo-auto/free            800.4ms
-HuggingSpace              command-a-03-2025         1064.1ms
-CohereForAI_C4AI_Command  command-r7b-12-2024       1137.4ms
-CohereForAI_C4AI_Command  command-a-03-2025         1220.7ms
-GoogleSearch              search                    1529.1ms
-CohereForAI_C4AI_Command  command-r-08-2024         2465.4ms
-CachedSearch              default                   2575.8ms
-Yqcloud                   gpt-4                     2994.6ms
-LLM7                      default                   3978.7ms
-CohereForAI_C4AI_Command  command-r-plus-08-2024    5716.4ms
-AnyProvider               agent-tools               7410.7ms
-PollinationsImage         auto                      9055.9ms
-BlackForestLabs_Flux1Dev  flux-dev                  23629.8ms
+CohereForAI_C4AI_Command  command-r-08-2024         940.4ms
+KiloCode                  kilo-auto/free            1065.5ms
+CohereForAI_C4AI_Command  command-a-03-2025         1444.6ms
+GoogleSearch              search                    2627.3ms
+AnyProvider               default                   4432.1ms
+LLM7                      default                   4841.8ms
+AnyProvider               agent-tools               6035.5ms
+CachedSearch              default                   22184.3ms
+CohereForAI_C4AI_Command  command-r7b-12-2024       23513.7ms
+HuggingSpace              command-a-03-2025         23960.3ms
+BlackForestLabs_Flux1Dev  flux-dev                  24593.7ms
 
 ALL RESULTS:
 ------------------------------------------------------------
+IterListProvider          default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
+YouTube                   search                    status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
+RotatedProvider           default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
+gTTS                      English (Australia)       status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
+CreateImagesProvider      default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
+gTTS                      English (United Kingdom)  status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
+Local                     default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
+gTTS                      English (United States)   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 gTTS                      English (Canada)          status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
+YouTube                   480p                      status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 gTTS                      English (India)           status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 gTTS                      English (Ireland)         status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 OpenaiTemplate            default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 QwenCode                  qwen3-coder-plus          status=skipped  auth=True  browser=False time=Nonems error=marked not working by g4f
-gTTS                      English (United States)   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 SearXNG                   default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 EdgeTTS                   default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 YouTube                   mp3                       status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 YouTube                   1080p                     status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
 YouTube                   720p                      status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-IterListProvider          default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-YouTube                   480p                      status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-RotatedProvider           default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-YouTube                   search                    status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-CreateImagesProvider      default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-gTTS                      English (Australia)       status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-Local                     default                   status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-gTTS                      English (United Kingdom)  status=skipped  auth=False browser=False time=Nonems error=marked not working by g4f
-Antigravity               gemini-3-flash            status=error    auth=True  browser=False time=24111.8ms error=RuntimeError: ANTIGRAVITY_SERVICE_ACCOUNT environment variable not set. Please set it or create credentials at /home/runner/.antigravity/oauth_creds.json
-Copilot                   Study                     status=error    auth=True  browser=True  time=24111.5ms error=RuntimeError: Failed to start shared Chrome on port 57963: [3497:3526:1026/033030.146792:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[3497:3497:1026/033030.462633:ERROR:ui/ozone/platf
-MarkItDown                default                   status=error    auth=False browser=False time=24110.5ms error=ValueError: MarkItDown requires media to be provided.
-MiniMax                   MiniMax-M3                status=error    auth=True  browser=False time=24090.8ms error=MissingAuthError: Add a "api_key"
-GeminiCLI                 gemini-3-pro-preview      status=error    auth=True  browser=False time=24079.8ms error=RuntimeError: GCP_SERVICE_ACCOUNT environment variable not set.
-Cerebras                  deepseek-r1-distill-llama-70b status=error    auth=False browser=True  time=24304.0ms error=ResponseStatusError: Response 404: Not Found
+PollinationsAudio         elevenlabs                status=error    auth=False browser=False time=1092.2ms error=NameError: name 'AuthManager' is not defined
+GigaChat                  GigaChat-2-Pro            status=error    auth=True  browser=True  time=1089.7ms error=MissingAuthError: Missing "api_key"
+HuggingFaceMedia          default                   status=error    auth=True  browser=False time=278.6ms error=MissingAuthError: Add a "api_key"
+GigaChat                  GigaChat-2-Max            status=error    auth=True  browser=True  time=1.0ms error=MissingAuthError: Missing "api_key"
+OpenAIFM                  patient_teacher           status=error    auth=False browser=False time=3220.9ms error=RateLimitError: Response 429: HTML content
+HuggingFace               default                   status=error    auth=False browser=False time=3266.8ms error=MissingAuthError: Response 401: HTML content
+OpenAIFM                  noir_detective            status=error    auth=False browser=False time=27.4ms error=RateLimitError: Response 429: HTML content
+CohereForAI_C4AI_Command  command-r                 status=error    auth=False browser=False time=3321.1ms error=empty response
+ProviderCircuitBreaker    default                   status=error    auth=False browser=False time=0.0ms error=AttributeError: type object 'ProviderCircuitBreaker' has no attribute 'working'
+Copilot                   Copilot                   status=error    auth=True  browser=True  time=20037.6ms error=RuntimeError: Failed to start shared Chrome on port 52577: [3718:3748:1026/144856.913224:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3718:3718:1026/144857.266404:ERROR:ui/ozone/platf
+CohereForAI_C4AI_Command  command-r7b-12-2024       status=working  auth=False browser=False time=23513.7ms
+CachedSearch              default                   status=working  auth=False browser=False time=22184.3ms
+Puter                     gpt-5.1                   status=error    auth=True  browser=False time=0.7ms error=MissingAuthError: API key is required for Puter.js API
+GigaChat                  GigaChat                  status=error    auth=True  browser=True  time=0.2ms error=MissingAuthError: Missing "api_key"
+Cerebras                  llama3.1-70b              status=error    auth=False browser=True  time=36.9ms error=ResponseStatusError: Response 404: Not Found
 
-MiniMax                   MiniMax-M2.7              status=error    auth=True  browser=False time=0.2ms error=MissingAuthError: Add a "api_key"
-Claude                    default                   status=error    auth=False browser=True  time=4.6ms error=MissingAuthError: Claude cookie not found. Please set the 'CLAUDE_COOKIE' environment variable.
-Cerebras                  llama-3.3-70b             status=error    auth=False browser=True  time=229.0ms error=ResponseStatusError: Response 404: Not Found
+OpenAIFM                  cowboy                    status=error    auth=False browser=False time=29.8ms error=RateLimitError: Response 429: HTML content
+Copilot                   Think Deeper              status=error    auth=True  browser=True  time=20023.7ms error=RuntimeError: Failed to start shared Chrome on port 37855: [3754:3754:1026/144913.705925:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+[3754:3754:1026/144913.705991:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+[3754:3783:1026/144913.706
+BlackboxPro               deepseek/deepseek-r1-0528 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+Gemini                    gemini-3.1-pro            status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+Yqcloud                   gpt-4                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Gemini                    gemini-3.5-flash-lite     status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+PollinationsImage         auto                      status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+HuggingSpace              command-a-03-2025         status=working  auth=False browser=False time=23960.3ms
+GigaChat                  GigaChat-Pro              status=error    auth=True  browser=True  time=120.1ms error=MissingAuthError: Missing "api_key"
+ProviderLoader            default                   status=error    auth=False browser=False time=0.0ms error=AttributeError: type object 'ProviderLoader' has no attribute 'working'
+Cerebras                  llama3.1-8b               status=error    auth=False browser=True  time=223.8ms error=ResponseStatusError: Response 404: Not Found
 
-CopilotApp                smart                     status=error    auth=False browser=False time=268.2ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=e7a1f012-467d-4df8-ad1b-69ed68cf54f6'
-OpenRouterFree            default                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-MetaAI                    meta-ai                   status=error    auth=False browser=False time=1127.5ms error=ResponseStatusError: Response 403: Fetch home failed
-MetaAIAccount             meta-ai                   status=error    auth=True  browser=True  time=104.8ms error=ResponseStatusError: Response 403: Fetch home failed
-Airforce                  unmoderated-gpt           status=error    auth=False browser=False time=1006.0ms error=MissingAuthError: Error 401: Error 401: Missing Authorization
-GeminiPro                 default                   status=error    auth=False browser=False time=1057.9ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-CopilotApp                reasoning                 status=error    auth=False browser=False time=203.9ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=118aeab6-15d5-441e-8465-bb7d59f855ee'
-MiniMax                   MiniMax-M2.7-highspeed    status=error    auth=True  browser=False time=37.0ms error=MissingAuthError: Add a "api_key"
-GithubCopilot             gpt-4.1                   status=error    auth=True  browser=False time=37.2ms error=MissingAuthError: GitHub Copilot OAuth not configured. Please run 'g4f auth github-copilot' to authenticate.
-BingCreateImages          dall-e-3                  status=error    auth=True  browser=True  time=17.7ms error=MissingAuthError: Missing "_U" cookie
-CopilotApp                chat                      status=error    auth=False browser=False time=165.8ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=cb933548-907f-4ab5-bc29-ccd627d0733b'
-OperaAria                 aria                      status=error    auth=False browser=False time=1141.7ms error=ClientResponseError: 401, message='Unauthorized', url='https://oauth2.opera-api.com/oauth2/v1/token/'
-Qwen                      qwen3.6-plus              status=error    auth=False browser=True  time=7159.1ms error=ResponseError: Not_Found: Model not found
-OpenAIFM                  scientific_style          status=error    auth=False browser=False time=149.7ms error=RateLimitError: Response 429: HTML content
+OpenAIFM                  calm                      status=error    auth=False browser=False time=143.5ms error=RateLimitError: Response 429: HTML content
+GigaChat                  GigaChat-Max              status=error    auth=True  browser=True  time=0.2ms error=MissingAuthError: Missing "api_key"
+BlackboxPro               google/gemini-2.5-pro-preview-03-25 status=error    auth=True  browser=True  time=344.2ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
+Gemini                    gemini-3.8-pro            status=error    auth=False browser=True  time=0.3ms error=MissingAuthError: Gemini session is unauthenticated; model 'gemini-3.8-pro' would fall back to Flash
+Cerebras                  llama-3.3-70b             status=error    auth=False browser=True  time=84.0ms error=ResponseStatusError: Response 404: Not Found
+
+Antigravity               gemini-3-flash            status=error    auth=True  browser=False time=0.4ms error=RuntimeError: ANTIGRAVITY_SERVICE_ACCOUNT environment variable not set. Please set it or create credentials at /home/runner/.antigravity/oauth_creds.json
+OpenAIFM                  scientific_style          status=error    auth=False browser=False time=114.9ms error=RateLimitError: Response 429: HTML content
+MarkItDown                default                   status=error    auth=False browser=False time=0.9ms error=ValueError: MarkItDown requires media to be provided.
+Gemini                    gemini-3.7-flash          status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+MiniMax                   MiniMax-M3                status=error    auth=True  browser=False time=0.2ms error=MissingAuthError: Add a "api_key"
+OpenAIFM                  friendly                  status=error    auth=False browser=False time=52.9ms error=RateLimitError: Response 429: HTML content
+Cerebras                  deepseek-r1-distill-llama-70b status=error    auth=False browser=True  time=38.1ms error=ResponseStatusError: Response 404: Not Found
+
+GeminiCLI                 gemini-3-pro-preview      status=error    auth=True  browser=False time=0.4ms error=RuntimeError: GCP_SERVICE_ACCOUNT environment variable not set.
+OpenRouterFree            default                   status=error    auth=False browser=False time=319.8ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+Qwen                      qwen3.8-max               status=error    auth=False browser=True  time=7543.1ms error=ResponseError: Bad_Request: Internal error...
+Qwen                      qwen3.7-plus              status=error    auth=False browser=True  time=7877.0ms error=ResponseError: Bad_Request: Internal error...
+MetaAI                    meta-ai                   status=error    auth=False browser=False time=22.9ms error=ResponseStatusError: Response 403: Fetch home failed
+CopilotApp                smart                     status=error    auth=False browser=False time=161.9ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=a114dccf-d5f3-4cbe-9b24-373d526d0662'
+MiniMax                   MiniMax-M2.7              status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
+Claude                    default                   status=error    auth=False browser=True  time=2.9ms error=MissingAuthError: Claude cookie not found. Please set the 'CLAUDE_COOKIE' environment variable.
+Qwen                      qwen3.8-omni-flashqwen3.7-max status=error    auth=False browser=True  time=7505.3ms error=ResponseError: Not_Found: Model not found
+GeminiPro                 default                   status=error    auth=False browser=False time=329.3ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+Qwen                      qwen3.6-plus              status=error    auth=False browser=True  time=1401.8ms error=ResponseError: Not_Found: Model not found
+Airforce                  unmoderated-gpt           status=error    auth=False browser=False time=1096.1ms error=MissingAuthError: Error 401: Error 401: Missing Authorization
+MetaAIAccount             meta-ai                   status=error    auth=True  browser=True  time=13.9ms error=ResponseStatusError: Response 403: Fetch home failed
+CopilotApp                reasoning                 status=error    auth=False browser=False time=156.6ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=a4ec2e0d-7266-45ee-ab04-19cc63d9aef3'
+MiniMax                   MiniMax-M2.7-highspeed    status=error    auth=True  browser=False time=0.2ms error=MissingAuthError: Add a "api_key"
+Qwen                      qwen3.6-max-preview       status=error    auth=False browser=True  time=991.1ms error=ResponseError: Not_Found: Model not found
+GithubCopilot             gpt-4.1                   status=error    auth=True  browser=False time=0.7ms error=MissingAuthError: GitHub Copilot OAuth not configured. Please run 'g4f auth github-copilot' to authenticate.
+OperaAria                 aria                      status=error    auth=False browser=False time=1381.7ms error=ClientResponseError: 401, message='Unauthorized', url='https://oauth2.opera-api.com/oauth2/v1/token/'
+BingCreateImages          dall-e-3                  status=error    auth=True  browser=True  time=2.8ms error=MissingAuthError: Missing "_U" cookie
+CopilotApp                chat                      status=error    auth=False browser=False time=332.2ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=66eebb92-1470-4759-a08b-faac478c08e7'
+Arena                     default                   status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+Qwen                      qwen3.6-27b               status=error    auth=False browser=True  time=943.8ms error=ResponseError: Not_Found: Model not found
 Cohere                    command-r-plus            status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
-Qwen                      qwen3.8-omni-flashqwen3.7-max status=error    auth=False browser=True  time=31427.2ms error=ResponseError: Not_Found: Model not found
-Qwen                      qwen3.6-max-preview       status=error    auth=False browser=True  time=6130.2ms error=ResponseError: Not_Found: Model not found
-Qwen                      qwen3.6-27b               status=error    auth=False browser=True  time=5368.4ms error=ResponseError: Not_Found: Model not found
-BraveSearch               brave                     status=error    auth=False browser=False time=85.6ms error=ResponseStatusError: Response 403: HTML content
-OperaAria                 aria-legacy               status=error    auth=False browser=False time=701.8ms error=ClientResponseError: 401, message='Unauthorized', url='https://oauth2.opera-api.com/oauth2/v1/token/'
-CopilotApp                study                     status=error    auth=False browser=False time=183.7ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=7725a52a-0288-4a65-98cd-d08939f08a3b'
-OpenRouter                openrouter/auto           status=error    auth=True  browser=False time=0.3ms error=MissingAuthError: Add a "api_key"
-ChatGPT                   auto                      status=error    auth=False browser=False time=12183.6ms error=RuntimeError: ChatGPT: composer did not appear
-GoogleSearch              search                    status=working  auth=False browser=False time=1529.1ms
-Cloudflare                deepseek-coder-6.7b       status=working  auth=False browser=True  time=14109.5ms
-OrcaRouter                default                   status=error    auth=False browser=False time=397.6ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-BraveSearch               brave-deep-research       status=error    auth=False browser=False time=35.1ms error=ResponseStatusError: Response 403: HTML content
-CopilotApp                search                    status=error    auth=False browser=False time=162.6ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=f8aad416-a2e7-44cf-ba74-6732d79fb78c'
-Perplexity                auto                      status=working  auth=False browser=True  time=3434.2ms
-Cloudflare                deepseek-coder-6.7b-base  status=working  auth=False browser=True  time=13805.1ms
+GoogleAiMode              ai-mode                   status=error    auth=False browser=False time=377.9ms error=RuntimeError: {'code': -32000, 'message': 'Inspected target navigated or closed'}
+Gemini                    gemini-3.8-flash          status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+Copilot                   Smart (GPT-5)             status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+BraveSearch               brave                     status=error    auth=False browser=False time=85.4ms error=ResponseStatusError: Response 403: HTML content
+Copilot                   Study                     status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+CopilotApp                study                     status=error    auth=False browser=False time=341.7ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=9b251db6-5246-45c1-981c-ed97527bc0e8'
+OpenRouter                openrouter/auto           status=error    auth=True  browser=False time=0.2ms error=MissingAuthError: Add a "api_key"
+OperaAria                 aria-legacy               status=error    auth=False browser=False time=1134.2ms error=ClientResponseError: 401, message='Unauthorized', url='https://oauth2.opera-api.com/oauth2/v1/token/'
 AgentTools                auto                      status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+GoogleSearch              search                    status=working  auth=False browser=False time=2627.3ms
+OrcaRouter                default                   status=error    auth=False browser=False time=609.6ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+BraveSearch               brave-deep-research       status=error    auth=False browser=False time=35.2ms error=ResponseStatusError: Response 403: HTML content
+CopilotApp                search                    status=error    auth=False browser=False time=142.0ms error=RuntimeError: Error during CopilotApp interaction: 460, message='Invalid response status', url='wss://copilot.microsoft.com/c/api/chat?api-version=2&clientSessionId=73bc4ee1-588e-46f1-bdc3-c93119b4da0b'
+Perplexity                auto                      status=working  auth=False browser=True  time=3438.5ms
+ChatGPT                   auto                      status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
+Cloudflare                deepseek-coder-6.7b       status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+Cloudflare                deepseek-coder-6.7b-base  status=working  auth=False browser=True  time=13127.0ms
 MicrosoftDesigner         dall-e-3                  status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-Cloudflare                deepseek-distill-qwen-32b status=working  auth=False browser=True  time=18514.0ms
 Anthropic                 claude-opus-4-1-20250805  status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
-Perplexity                turbo                     status=working  auth=False browser=True  time=3389.8ms
-PhindAi                   deepseek-v3               status=error    auth=False browser=False time=14552.0ms error=ResponseStatusError: Response 406: HTML content
-Cloudflare                deepseek-math-7b          status=working  auth=False browser=True  time=11328.4ms
-GoogleAiMode              ai-mode                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-StabilityAI_SD35Large     sd-3.5-large              status=error    auth=False browser=False time=287.5ms error=ResponseError: GPU token limit exceeded: data: {"error": "You have exceeded your ZeroGPU quota (65s requested vs. 68s left). Try again in 23:59:54. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens", "duration": 10, "visible": true, "title": "ZeroGPU quot
+Perplexity                turbo                     status=working  auth=False browser=True  time=3344.8ms
+Cloudflare                deepseek-distill-qwen-32b status=working  auth=False browser=True  time=18903.3ms
+PhindAi                   deepseek-v3               status=error    auth=False browser=False time=17641.9ms error=ResponseStatusError: Response 406: HTML content
+StabilityAI_SD35Large     sd-3.5-large              status=error    auth=False browser=False time=110.6ms error=ResponseError: GPU token limit exceeded: data: {"error": "You have exceeded your ZeroGPU quota (65s requested vs. 68s left). Try again in 23:59:49. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens", "duration": 10, "visible": true, "title": "ZeroGPU quot
+PhindAi                   deepseek                  status=error    auth=False browser=False time=1829.6ms error=ResponseStatusError: Response 406: HTML content
 MicrosoftDesigner         1024x1024                 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-PhindAi                   deepseek                  status=error    auth=False browser=False time=2131.3ms error=ResponseStatusError: Response 406: HTML content
+AnyProvider               default                   status=working  auth=False browser=False time=4432.1ms
 MicrosoftDesigner         1024x1792                 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-Perplexity                gpt41                     status=working  auth=False browser=True  time=3458.4ms
+Cloudflare                deepseek-math-7b          status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
 Anthropic                 claude-sonnet-4-20250514  status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
-BlackForestLabs_Flux1Dev  flux                      status=error    auth=False browser=False time=285.2ms error=ResponseError: You have exceeded your ZeroGPU quota (112s requested vs. 68s left). Try again in 23:59:42. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens
-Cloudflare                discolm-german-7b-v1      status=working  auth=False browser=True  time=14380.8ms
-Nvidia                    default                   status=error    auth=False browser=False time=443.7ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-TeachAnything             gemma                     status=error    auth=False browser=False time=81.2ms error=HTTPError: HTTP Error 403: 
+Perplexity                gpt41                     status=working  auth=False browser=True  time=3513.0ms
+BlackForestLabs_Flux1Dev  flux                      status=error    auth=False browser=False time=340.3ms error=ResponseError: You have exceeded your ZeroGPU quota (112s requested vs. 68s left). Try again in 23:59:38. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens
+Nvidia                    default                   status=error    auth=False browser=False time=563.2ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+TeachAnything             gemma                     status=error    auth=False browser=False time=111.1ms error=HTTPError: HTTP Error 403: 
 Grok                      fast                      status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-BlackForestLabs_Flux1Dev  flux-dev                  status=working  auth=False browser=False time=23629.8ms
+BlackForestLabs_Flux1Dev  flux-dev                  status=working  auth=False browser=False time=24593.7ms
 DeepInfra                 zai-org/GLM-5.2           status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-AnyProvider               agent-tools               status=working  auth=False browser=False time=7410.7ms
-Anthropic                 claude-opus-4-20250522    status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
-BlackForestLabs_Flux1KontextDev flux-kontext-dev          status=error    auth=False browser=False time=0.2ms error=ValueError: No media files provided for image generation.
+Cloudflare                discolm-german-7b-v1      status=working  auth=False browser=True  time=14325.4ms
+Anthropic                 claude-opus-4-20250522    status=error    auth=True  browser=False time=0.2ms error=MissingAuthError: Add a "api_key"
+BlackForestLabs_Flux1KontextDev flux-kontext-dev          status=error    auth=False browser=False time=0.3ms error=ValueError: No media files provided for image generation.
+AnyProvider               agent-tools               status=working  auth=False browser=False time=6035.5ms
+RelayRouter               default                   status=error    auth=False browser=False time=290.2ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+WhiteRabbitNeo            default                   status=working  auth=True  browser=True  time=181.7ms
+Perplexity                gpt5                      status=working  auth=False browser=True  time=3350.9ms
+CohereForAI_C4AI_Command  command-a-03-2025         status=working  auth=False browser=False time=1444.6ms
 MicrosoftDesigner         1792x1024                 status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-RelayRouter               default                   status=error    auth=False browser=False time=451.2ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-AnyProvider               default                   status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-WhiteRabbitNeo            default                   status=working  auth=True  browser=True  time=396.8ms
-Perplexity                gpt5                      status=working  auth=False browser=True  time=3397.4ms
-CohereForAI_C4AI_Command  command-a-03-2025         status=working  auth=False browser=False time=1220.7ms
-Grok                      auto                      status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+Perplexity                gpt5_thinking             status=working  auth=False browser=True  time=3590.5ms
 Anthropic                 claude-3-7-sonnet-20250219 status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
-BlackboxPro               openai/gpt-5              status=error    auth=True  browser=True  time=318.9ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
-KiloCode                  kilo-auto/free            status=working  auth=False browser=False time=800.4ms
-You                       default                   status=error    auth=False browser=False time=0.8ms error=InvalidURL: Failed to perform, curl: (3) URL rejected: No host part in the URL. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-Perplexity                gpt5_thinking             status=working  auth=False browser=True  time=3424.2ms
-CohereForAI_C4AI_Command  command-r-plus-08-2024    status=working  auth=False browser=False time=5716.4ms
-Groq                      default                   status=error    auth=False browser=False time=410.1ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-Cloudflare                falcon-7b                 status=working  auth=False browser=True  time=19292.0ms
-Anthropic                 claude-3-5-sonnet-20241022 status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
-BlackboxPro               x-ai/grok-4               status=error    auth=True  browser=True  time=216.8ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
-ElevenLabs                eleven_v3                 status=error    auth=True  browser=True  time=1.7ms error=RuntimeError: hCaptcha accessibility cookie required: log in at https://dashboard.hcaptcha.com/signup?type=accessibility in your browser, or pass hc_accessibility="...".
+BlackboxPro               openai/gpt-5              status=error    auth=True  browser=True  time=174.2ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
+KiloCode                  kilo-auto/free            status=working  auth=False browser=False time=1065.5ms
+You                       default                   status=error    auth=False browser=False time=0.8ms error=CurlError: Failed to getinfo 1048577, curl: (27) URL rejected: No host present. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+Grok                      auto                      status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
 DeepSeek                  deepseek-chat             status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-Perplexity                o3                        status=working  auth=False browser=True  time=3390.4ms
-LLM7                      default                   status=working  auth=False browser=False time=3978.7ms
-CohereForAI_C4AI_Command  command-r-08-2024         status=working  auth=False browser=False time=2465.4ms
-Pi                        pi                        status=error    auth=False browser=True  time=383.0ms error=ResponseStatusError: Response 403: HTML content
-Anthropic                 claude-3-5-haiku-20241022 status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
-BlackboxPro               anthropic/claude-sonnet-4.5 status=error    auth=True  browser=True  time=229.9ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
+Groq                      default                   status=error    auth=False browser=False time=392.0ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+Cloudflare                falcon-7b                 status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+Anthropic                 claude-3-5-sonnet-20241022 status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
+BlackboxPro               x-ai/grok-4               status=error    auth=True  browser=True  time=156.7ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
+ElevenLabs                eleven_v3                 status=error    auth=True  browser=True  time=8.4ms error=RuntimeError: hCaptcha accessibility cookie required: log in at https://dashboard.hcaptcha.com/signup?type=accessibility in your browser, or pass hc_accessibility="...".
 Grok                      heavy                     status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-Ollama                    default                   status=error    auth=False browser=True  time=161.7ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-AnyProvider               gpt-4o-mini-tts           status=error    auth=False browser=False time=540.6ms error=RetryProviderError: RetryProvider failed:
+Perplexity                o3                        status=working  auth=False browser=True  time=3677.9ms
+CohereForAI_C4AI_Command  command-r-08-2024         status=working  auth=False browser=False time=940.4ms
+LLM7                      default                   status=working  auth=False browser=False time=4841.8ms
+DeepSeek                  deepseek-r1               status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+Anthropic                 claude-3-5-haiku-20241022 status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
+BlackboxPro               anthropic/claude-sonnet-4.5 status=error    auth=True  browser=True  time=160.3ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
+Pi                        pi                        status=error    auth=False browser=True  time=444.7ms error=ResponseStatusError: Response 403: HTML content
+Ollama                    default                   status=error    auth=False browser=True  time=133.9ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+AnyProvider               gpt-4o-mini-tts           status=error    auth=False browser=False time=198.2ms error=RetryProviderError: RetryProvider failed:
 Airforce: PaymentRequiredError: Error 402: Error 402: Model 'gpt-4o-mini-tts' requires an active subscription or a positive Pay-As-You-Go balance. Subscribe or top up at https://api.airforce/dashboard, or pick a free model from https://api.airforce/models.
 O
-CohereForAI_C4AI_Command  command-r-plus            status=error    auth=False browser=False time=314.4ms error=empty response
-DeepSeek                  deepseek-r1               status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-G4FSpace                  auto                      status=error    auth=False browser=False time=5837.6ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-GigaChat                  GigaChat-2                status=error    auth=True  browser=True  time=0.2ms error=MissingAuthError: Missing "api_key"
-Pollinations              default                   status=error    auth=False browser=False time=559.7ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
-Grok                      expert                    status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-OmniRoute                 auto                      status=error    auth=False browser=False time=2.3ms error=ConnectionError: Failed to perform, curl: (7) Failed to connect to localhost:20128 after 1 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+CohereForAI_C4AI_Command  command-r-plus            status=error    auth=False browser=False time=130.6ms error=empty response
 AnyProvider               gpt-4                     status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-BlackboxPro               deepseek/deepseek-chat-v3.1 status=error    auth=True  browser=True  time=2605.5ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
-PollinationsAudio         elevenlabs                status=error    auth=False browser=False time=0.1ms error=NameError: name 'AuthManager' is not defined
-GigaChat                  GigaChat-2-Pro            status=error    auth=True  browser=True  time=0.0ms error=MissingAuthError: Missing "api_key"
-HuggingFace               default                   status=error    auth=False browser=False time=103.4ms error=MissingAuthError: Response 401: HTML content
-CohereForAI_C4AI_Command  command-r                 status=error    auth=False browser=False time=276.5ms error=empty response
-BlackboxPro               google/gemini-2.5-pro-preview-03-25 status=error    auth=True  browser=True  time=305.5ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
-OpenAIFM                  friendly                  status=error    auth=False browser=False time=101.1ms error=RateLimitError: Response 429: HTML content
-HuggingFaceMedia          default                   status=error    auth=True  browser=False time=0.1ms error=MissingAuthError: Add a "api_key"
-CohereForAI_C4AI_Command  command-r7b-12-2024       status=working  auth=False browser=False time=1137.4ms
-GigaChat                  GigaChat-2-Max            status=error    auth=True  browser=True  time=0.1ms error=MissingAuthError: Missing "api_key"
-BlackboxPro               deepseek/deepseek-r1-0528 status=error    auth=True  browser=True  time=273.9ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
+Pollinations              default                   status=error    auth=False browser=False time=265.2ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
+GigaChat                  GigaChat-2                status=error    auth=True  browser=True  time=0.1ms error=MissingAuthError: Missing "api_key"
+BlackboxPro               deepseek/deepseek-chat-v3.1 status=error    auth=True  browser=True  time=164.2ms error=ClientResponseError: 404, message='Not Found', url='https://www.blackbox.ai/api/auth/session'
+Grok                      expert                    status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+OmniRoute                 auto                      status=error    auth=False browser=False time=1.7ms error=ConnectionError: Failed to perform, curl: (7) Failed to connect to localhost:20128 after 0 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+G4FSpace                  auto                      status=error    auth=False browser=False time=5934.4ms error=PaymentRequiredError: Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.
 AnyProvider               gpt-4o                    status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-OpenAIFM                  patient_teacher           status=error    auth=False browser=False time=84.1ms error=RateLimitError: Response 429: HTML content
-ProviderCircuitBreaker    default                   status=error    auth=False browser=False time=0.0ms error=AttributeError: type object 'ProviderCircuitBreaker' has no attribute 'working'
-Gemini                    gemini-3.6-flash          status=working  auth=False browser=True  time=3003.8ms
-HuggingSpace              command-a-03-2025         status=working  auth=False browser=False time=1064.1ms
-Puter                     gpt-5.1                   status=error    auth=True  browser=False time=0.2ms error=MissingAuthError: API key is required for Puter.js API
-GigaChat                  GigaChat                  status=error    auth=True  browser=True  time=0.1ms error=MissingAuthError: Missing "api_key"
-Gemini                    gemini-3.5-flash-lite     status=working  auth=False browser=True  time=3662.0ms
-Gemini                    gemini-3.1-pro            status=error    auth=False browser=True  time=0.2ms error=MissingAuthError: Gemini session is unauthenticated; model 'gemini-3.1-pro' would fall back to Flash
-OpenAIFM                  noir_detective            status=error    auth=False browser=False time=271.4ms error=RateLimitError: Response 429: HTML content
-CachedSearch              default                   status=working  auth=False browser=False time=2575.8ms
-GLM                       GLM-4.7                   status=working  auth=False browser=True  time=10887.4ms
-Yqcloud                   gpt-4                     status=working  auth=False browser=False time=2994.6ms
-PollinationsImage         auto                      status=working  auth=False browser=False time=9055.9ms
-GigaChat                  GigaChat-Pro              status=error    auth=True  browser=True  time=0.1ms error=MissingAuthError: Missing "api_key"
-Qwen                      qwen3.7-plus              status=error    auth=False browser=True  time=797.7ms error=ResponseError: Bad_Request: Internal error...
-Cerebras                  llama3.1-70b              status=error    auth=False browser=True  time=173.6ms error=ResponseStatusError: Response 404: Not Found
-
-OpenAIFM                  cowboy                    status=error    auth=False browser=False time=100.1ms error=RateLimitError: Response 429: HTML content
-ProviderLoader            default                   status=error    auth=False browser=False time=0.0ms error=AttributeError: type object 'ProviderLoader' has no attribute 'working'
-AnyProvider               gpt-4o-mini               status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
-Gemini                    gemini-3.7-flash          status=working  auth=False browser=True  time=1978.2ms
-GigaChat                  GigaChat-Max              status=error    auth=True  browser=True  time=0.1ms error=MissingAuthError: Missing "api_key"
-Cerebras                  llama3.1-8b               status=error    auth=False browser=True  time=115.5ms error=ResponseStatusError: Response 404: Not Found
-
-Qwen                      qwen3.8-max               status=error    auth=False browser=True  time=865.1ms error=CloudflareError: Qwen browser verification is required (FAIL_SYS_USER_VALIDATE / RGV587_ERROR); complete verification in the browser before submitting again.
-OpenAIFM                  calm                      status=error    auth=False browser=False time=83.0ms error=RateLimitError: Response 429: HTML content
-Gemini                    gemini-3.8-pro            status=error    auth=False browser=True  time=0.2ms error=MissingAuthError: Gemini session is unauthenticated; model 'gemini-3.8-pro' would fall back to Flash
-Gemini                    gemini-3.8-flash          status=working  auth=False browser=True  time=3006.7ms
+GLM                       GLM-4.7                   status=working  auth=False browser=True  time=10019.4ms
+CohereForAI_C4AI_Command  command-r-plus-08-2024    status=timeout  auth=False browser=False time=25000.0ms error=no response within 25s
 HailuoAI                  minimax                   status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
 HuggingChat               default                   status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-Copilot                   Copilot                   status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-Copilot                   Think Deeper              status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
-Arena                     default                   status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
-Copilot                   Smart (GPT-5)             status=timeout  auth=True  browser=True  time=25000.0ms error=no response within 25s
+Gemini                    gemini-3.6-flash          status=timeout  auth=False browser=True  time=25000.0ms error=no response within 25s
+AnyProvider               gpt-4o-mini               status=error    auth=False browser=False time=182277.8ms error=RetryProviderError: RetryProvider failed:
+ChatGPT: RuntimeError: ChatGPT: reply timed out
+Airforce: PaymentRequiredError: Error 402: Error 402: Model 'gpt-4o-mini' requires an active subscription or a positive Pay-As-You-Go balance. Subscribe or top up at https://api.airforce/dashboard, or pick a fr
